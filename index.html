@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مترجم أسماء اللاعبين</title>
+    <title>مترجم أسماء اللاعبين وإحصائيات الدوري</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f9; }
-        #results { margin-top: 20px; }
-        .player-card { margin-bottom: 15px; padding: 15px; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-right: 4px solid #007bff; }
+        #results { margin-top: 20px; display: grid; gap: 15px; }
+        .player-card { padding: 15px; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-right: 4px solid #007bff; }
     </style>
 </head>
 <body>
@@ -15,43 +15,35 @@
     <h2>قائمة اللاعبين المترجمة</h2>
     <div id="results">جاري تحميل البيانات...</div>
 
-    <script>
-        // القاموس كامل
-        window.playerNames = {
-          "Francisco Trincão": "فرانسيسكو ترينتساو",
-          "Eduard Spertsyan": "إدوارد سبيرتسيان",
-          "Feras Al-Brikan": "فراس البريكان",
-          "Meshal Ibrahim Al Mutairi": "مشعل إبراهيم المطيري",
-          "Cristiano Ronaldo": "كريستيانو رونالدو",
-          "Sadio Mané": "ساديو ماني",
-          "Salem Al-Dawsari": "سالم الدوسري"
-          // الصق باقي الأسماء الخاصة بك هنا
-        };
+    <!-- استدعاء ملف القاموس الخارجي -->
+    <script src="names.js"></script>
 
+    <script>
+        // دالة الترجمة للبحث داخل القاموس الخارجي
         window.translatePlayer = function(name) {
-          if (!name) return '';
-          if (playerNames[name]) return playerNames[name];
+          if (!name) return 'غير معروف';
+          if (window.playerNames && window.playerNames[name]) return window.playerNames[name];
           var lower = name.toLowerCase();
-          for (var k in playerNames) {
-            if (k.toLowerCase() === lower) return playerNames[k];
+          for (var k in window.playerNames) {
+            if (k.toLowerCase() === lower) return window.playerNames[k];
           }
           return name; 
         };
 
-        // جلب البيانات من ملف data.json
+        // جلب البيانات من ملف data.json مع منع الكاش
         document.addEventListener("DOMContentLoaded", function() {
-            // إضافة وقت حالي للرابط تمنع المتصفح من استخدام نسخة قديمة من الملف (حل مشكلة الكاش)
             fetch('data.json?v=' + new Date().getTime())
                 .then(response => response.json())
                 .then(data => {
                     const resultsDiv = document.getElementById('results');
                     resultsDiv.innerHTML = ''; 
 
-                    // التأكد من وجود البيانات قبل عرضها
-                    if(data && data.players) {
+                    // التأكد من وجود مصفوفة اللاعبين التي ينتجها البايثون
+                    if(data && data.players && data.players.length > 0) {
                         data.players.forEach(player => {
-                            const englishName = player.englishName || 'غير متوفر';
-                            const club = player.club || 'غير متوفر';
+                            // استخدام المفاتيح الصحيحة التي يولدها البايثون (name و team)
+                            const englishName = player.name || 'غير متوفر';
+                            const club = player.team || 'غير متوفر';
                             const arabicName = window.translatePlayer(englishName);
                             
                             const playerHtml = `
@@ -69,7 +61,7 @@
                 })
                 .catch(error => {
                     console.error('حدث خطأ:', error);
-                    document.getElementById('results').innerHTML = 'تعذر تحميل البيانات من ملف JSON. تأكد من صحة مسار الملف وصيغته.';
+                    document.getElementById('results').innerHTML = 'تعذر تحميل البيانات من ملف JSON. تأكد من تشغيل أتمتة البايثون لتوليد الملف.';
                 });
         });
     </script>
