@@ -10,17 +10,14 @@
         h1 { text-align: center; color: #1b4d3e; margin-bottom: 5px; }
         .subtitle { text-align: center; color: #666; margin-bottom: 20px; font-size: 14px; }
         
-        /* الأزرار */
         .nav-buttons { display: flex; justify-content: center; gap: 8px; margin-bottom: 25px; flex-wrap: wrap; }
         .btn { background-color: #e0e0e0; color: #333; border: none; padding: 10px 18px; font-size: 14px; font-weight: bold; border-radius: 25px; cursor: pointer; transition: 0.3s; }
         .btn.active { background-color: #1b4d3e; color: white; box-shadow: 0 4px 10px rgba(27, 77, 62, 0.3); }
         .btn:hover { background-color: #14382c; color: white; }
 
-        /* الأقسام */
         .section { display: none; }
         .section.active { display: block; }
 
-        /* الجداول والبطاقات */
         table { width: 100%; border-collapse: collapse; margin-top: 10px; }
         th, td { border: 1px solid #e1e4e8; padding: 10px; text-align: center; font-size: 14px; }
         th { background-color: #1b4d3e; color: white; }
@@ -29,16 +26,14 @@
         
         .match-card { background: #fdfefe; border: 1px solid #e1e4e8; border-radius: 8px; padding: 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.03); }
         
-        /* شعارات الأندية والصور */
         .team-box { display: flex; align-items: center; justify-content: center; gap: 10px; width: 35%; }
-        .team-logo { width: 40px; height: 40px; object-fit: contain; }
+        .team-logo { width: 38px; height: 38px; object-fit: contain; }
         .team-name { font-weight: bold; color: #1b4d3e; font-size: 15px; }
         
         .player-img { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid #1b4d3e; }
         .player-info { display: flex; align-items: center; gap: 12px; }
 
         .score-box { font-size: 18px; font-weight: bold; color: #1b4d3e; background: #e8f5e9; padding: 5px 15px; border-radius: 20px; }
-        .no-match { text-align: center; color: #666; padding: 20px; font-size: 16px; }
     </style>
 </head>
 <body>
@@ -47,7 +42,6 @@
     <h1>⚽ دوري روشن السعودي للمحترفين</h1>
     <div class="subtitle">المباريات، الترتيب، الشعارات، وهدافو الدوري</div>
 
-    <!-- الأزرار -->
     <div class="nav-buttons">
         <button id="btnYesterday" class="btn" onclick="switchTab('yesterday')">⏪ الأمس</button>
         <button id="btnToday" class="btn active" onclick="switchTab('today')">⚡ اليوم</button>
@@ -56,7 +50,6 @@
         <button id="btnScorers" class="btn" onclick="switchTab('scorers')">🏆 الهدافون</button>
     </div>
 
-    <!-- الأقسام -->
     <div id="yesterdaySection" class="section">
         <h3 style="color: #1b4d3e; text-align: right;">مباريات الأمس:</h3>
         <div id="yesterdayList"></div>
@@ -107,30 +100,30 @@
 </div>
 
 <script>
-    // روابط شعارات الأندية الرسمية
+    // روابط شعارات بديلة ومباشرة ومستقرة تماماً
     const teamLogos = {
-        "الهلال": "https://a.espncdn.com/i/teamlogos/soccer/500/4236.png",
-        "النصر": "https://a.espncdn.com/i/teamlogos/soccer/500/4237.png",
-        "الاتحاد": "https://a.espncdn.com/i/teamlogos/soccer/500/4238.png",
-        "الأهلي": "https://a.espncdn.com/i/teamlogos/soccer/500/4235.png",
-        "القادسية": "https://a.espncdn.com/i/teamlogos/soccer/500/21262.png",
-        "الشباب": "https://a.espncdn.com/i/teamlogos/soccer/500/4240.png",
-        "التعاون": "https://a.espncdn.com/i/teamlogos/soccer/500/13763.png",
-        "الاتفاق": "https://a.espncdn.com/i/teamlogos/soccer/500/4239.png",
-        "الفتح": "https://a.espncdn.com/i/teamlogos/soccer/500/13764.png",
-        "الرياض": "https://a.espncdn.com/i/teamlogos/soccer/500/18883.png",
-        "نيوم": "https://a.espncdn.com/i/teamlogos/soccer/500/default-team-logo-1.png",
-        "الدرعية": "https://a.espncdn.com/i/teamlogos/soccer/500/default-team-logo-2.png",
-        "الخلود": "https://a.espncdn.com/i/teamlogos/soccer/500/default-team-logo-3.png",
-        "الخليج": "https://a.espncdn.com/i/teamlogos/soccer/500/18880.png",
-        "الحزم": "https://a.espncdn.com/i/teamlogos/soccer/500/18879.png",
-        "الفيصلي": "https://a.espncdn.com/i/teamlogos/soccer/500/18881.png",
-        "الفيحاء": "https://a.espncdn.com/i/teamlogos/soccer/500/18882.png",
-        "أبها": "https://a.espncdn.com/i/teamlogos/soccer/500/18878.png"
+        "الهلال": "https://upload.wikimedia.org/wikipedia/ar/thumb/2/23/Al-Hilal_Saudi_Club.svg/150px-Al-Hilal_Saudi_Club.svg.png",
+        "النصر": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/Al-Nassr_FC_Logo.svg/150px-Al-Nassr_FC_Logo.svg.png",
+        "الاتحاد": "https://upload.wikimedia.org/wikipedia/en/thumb/3/36/Al-Ittihad_Club_%28Jeddah%29_logo.svg/150px-Al-Ittihad_Club_%28Jeddah%29_logo.svg.png",
+        "الأهلي": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Al-Ahli_Saudi_FC.svg/150px-Al-Ahli_Saudi_FC.svg.png",
+        "القادسية": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Al-Qadsiah_FC_logo.svg/150px-Al-Qadsiah_FC_logo.svg.png",
+        "الشباب": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/Al-Shabab_FC_%28Saudi_Arabia%29.svg/150px-Al-Shabab_FC_%28Saudi_Arabia%29.svg.png",
+        "التعاون": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/Al-Taawoun_FC.svg/150px-Al-Taawoun_FC.svg.png",
+        "الاتفاق": "https://upload.wikimedia.org/wikipedia/en/thumb/9/94/Al-Ettifaq_FC_logo.svg/150px-Al-Ettifaq_FC_logo.svg.png",
+        "الفتح": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Al-Fateh_SC_logo.svg/150px-Al-Fateh_SC_logo.svg.png",
+        "الرياض": "https://upload.wikimedia.org/wikipedia/en/thumb/2/29/Al-Riyadh_SC.svg/150px-Al-Riyadh_SC.svg.png",
+        "الخليج": "https://upload.wikimedia.org/wikipedia/en/thumb/9/91/Al-Khaleej_Club.svg/150px-Al-Khaleej_Club.svg.png",
+        "الخلود": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/Al-Kholood_Club_logo.svg/150px-Al-Kholood_Club_logo.svg.png",
+        "الحزم": "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Al-Hazem_FC.svg/150px-Al-Hazem_FC.svg.png",
+        "الفيحاء": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Al-Fayha_FC.svg/150px-Al-Fayha_FC.svg.png",
+        "الفيصلي": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Al-Faisaly_FC_logo.svg/150px-Al-Faisaly_FC_logo.svg.png",
+        "نيوم": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b3/NEOM_SC_logo.svg/150px-NEOM_SC_logo.svg.png",
+        "الدرعية": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Al-Diriyah_Club_logo.svg/150px-Al-Diriyah_Club_logo.svg.png",
+        "أبها": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Abha_Club.svg/150px-Abha_Club.svg.png"
     };
 
     function getLogo(teamName) {
-        return teamLogos[teamName] || "https://a.espncdn.com/i/teamlogos/soccer/500/default-team-logo-1.png";
+        return teamLogos[teamName] || "https://upload.wikimedia.org/wikipedia/en/thumb/a/ac/Default_pfp.svg/150px-Default_pfp.svg.png";
     }
 
     function switchTab(tab) {
@@ -179,11 +172,11 @@
     ];
 
     const scorersData = [
-        { rank: 1, player: "إيفان توني", team: "الأهلي", goals: 11, img: "https://a.espncdn.com/i/headshots/soccer/players/full/158580.png" },
-        { rank: 2, player: "ماتيوس ريتيغوي", team: "القادسية", goals: 6, img: "https://a.espncdn.com/i/headshots/soccer/players/full/304381.png" },
-        { rank: 3, player: "ألكسندر ميندي", team: "الفيصلي", goals: 5, img: "https://a.espncdn.com/i/headshots/soccer/players/full/default.png" },
-        { rank: 4, player: "ألكسندر لاكازيت", team: "نيوم", goals: 5, img: "https://a.espncdn.com/i/headshots/soccer/players/full/139955.png" },
-        { rank: 5, player: "كريستيانو رونالدو", team: "النصر", goals: 4, img: "https://a.espncdn.com/i/headshots/soccer/players/full/3829.png" }
+        { rank: 1, player: "إيفان توني", team: "الأهلي", goals: 11, img: "https://upload.wikimedia.org/wikipedia/commons/8/89/Placeholder.jpg" },
+        { rank: 2, player: "ماتيوس ريتيغوي", team: "القادسية", goals: 6, img: "https://upload.wikimedia.org/wikipedia/commons/8/89/Placeholder.jpg" },
+        { rank: 3, player: "ألكسندر ميندي", team: "الفيصلي", goals: 5, img: "https://upload.wikimedia.org/wikipedia/commons/8/89/Placeholder.jpg" },
+        { rank: 4, player: "ألكسندر لاكازيت", team: "نيوم", goals: 5, img: "https://upload.wikimedia.org/wikipedia/commons/8/89/Placeholder.jpg" },
+        { rank: 5, player: "كريستيانو رونالدو", team: "النصر", goals: 4, img: "https://upload.wikimedia.org/wikipedia/commons/8/89/Placeholder.jpg" }
     ];
 
     function renderMatches(data, elementId) {
@@ -202,7 +195,6 @@
                     </div>
                     <div style="text-align: center;">
                         ${scoreHTML}
-                        <div style="font-size: 11px; color: #e67e22; margin-top: 5px; font-weight: bold;">التفاصيل</div>
                     </div>
                     <div class="team-box">
                         <span class="team-name">${m.away}</span>
