@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مترجم أسماء اللاعبين وإحصائيات الدوري</title>
+    <title>قائمة اللاعبين المترجمة</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f9; }
-        #results { margin-top: 20px; display: grid; gap: 15px; }
-        .player-card { padding: 15px; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-right: 4px solid #007bff; }
+        #results { margin-top: 20px; }
+        .player-card { margin-bottom: 15px; padding: 15px; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-right: 4px solid #007bff; }
     </style>
 </head>
 <body>
@@ -19,7 +19,7 @@
     <script src="names.js"></script>
 
     <script>
-        // دالة الترجمة للبحث داخل القاموس الخارجي
+        // دالة الترجمة باستخدام القاموس الخارجي
         window.translatePlayer = function(name) {
           if (!name) return 'غير معروف';
           if (window.playerNames && window.playerNames[name]) return window.playerNames[name];
@@ -30,7 +30,7 @@
           return name; 
         };
 
-        // جلب البيانات من ملف data.json مع منع الكاش
+        // جلب البيانات من ملف data.json
         document.addEventListener("DOMContentLoaded", function() {
             fetch('data.json?v=' + new Date().getTime())
                 .then(response => response.json())
@@ -38,7 +38,7 @@
                     const resultsDiv = document.getElementById('results');
                     resultsDiv.innerHTML = ''; 
 
-                    // التأكد من وجود مصفوفة اللاعبين التي ينتجها البايثون
+                    // التأكد من وجود مصفوفة اللاعبين في ملف البيانات
                     if(data && data.players && data.players.length > 0) {
                         data.players.forEach(player => {
                             // استخدام المفاتيح الصحيحة التي يولدها البايثون (name و team)
@@ -61,7 +61,7 @@
                 })
                 .catch(error => {
                     console.error('حدث خطأ:', error);
-                    document.getElementById('results').innerHTML = 'تعذر تحميل البيانات من ملف JSON. تأكد من تشغيل أتمتة البايثون لتوليد الملف.';
+                    document.getElementById('results').innerHTML = 'تعذر تحميل البيانات من ملف JSON.';
                 });
         });
     </script>
