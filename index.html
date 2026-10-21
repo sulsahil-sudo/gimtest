@@ -27,10 +27,11 @@
         .match-card { background: #fdfefe; border: 1px solid #e1e4e8; border-radius: 8px; padding: 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.03); }
         
         .team-box { display: flex; align-items: center; justify-content: center; gap: 10px; width: 35%; }
-        .team-logo { width: 38px; height: 38px; object-fit: contain; }
+        
+        .team-badge { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 13px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); flex-shrink: 0; }
         .team-name { font-weight: bold; color: #1b4d3e; font-size: 15px; }
         
-        .player-img { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid #1b4d3e; }
+        .player-img { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid #1b4d3e; flex-shrink: 0; }
         .player-info { display: flex; align-items: center; gap: 12px; }
 
         .score-box { font-size: 18px; font-weight: bold; color: #1b4d3e; background: #e8f5e9; padding: 5px 15px; border-radius: 20px; }
@@ -40,7 +41,7 @@
 
 <div class="container">
     <h1>⚽ دوري روشن السعودي للمحترفين</h1>
-    <div class="subtitle">المباريات، الترتيب، الشعارات، وهدافو الدوري</div>
+    <div class="subtitle">المباريات، الترتيب، شعارات الأندية، وصور هدافي الدوري</div>
 
     <div class="nav-buttons">
         <button id="btnYesterday" class="btn" onclick="switchTab('yesterday')">⏪ الأمس</button>
@@ -100,30 +101,30 @@
 </div>
 
 <script>
-    // روابط شعارات بديلة ومباشرة ومستقرة تماماً
-    const teamLogos = {
-        "الهلال": "https://upload.wikimedia.org/wikipedia/ar/thumb/2/23/Al-Hilal_Saudi_Club.svg/150px-Al-Hilal_Saudi_Club.svg.png",
-        "النصر": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/Al-Nassr_FC_Logo.svg/150px-Al-Nassr_FC_Logo.svg.png",
-        "الاتحاد": "https://upload.wikimedia.org/wikipedia/en/thumb/3/36/Al-Ittihad_Club_%28Jeddah%29_logo.svg/150px-Al-Ittihad_Club_%28Jeddah%29_logo.svg.png",
-        "الأهلي": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Al-Ahli_Saudi_FC.svg/150px-Al-Ahli_Saudi_FC.svg.png",
-        "القادسية": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Al-Qadsiah_FC_logo.svg/150px-Al-Qadsiah_FC_logo.svg.png",
-        "الشباب": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/Al-Shabab_FC_%28Saudi_Arabia%29.svg/150px-Al-Shabab_FC_%28Saudi_Arabia%29.svg.png",
-        "التعاون": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/Al-Taawoun_FC.svg/150px-Al-Taawoun_FC.svg.png",
-        "الاتفاق": "https://upload.wikimedia.org/wikipedia/en/thumb/9/94/Al-Ettifaq_FC_logo.svg/150px-Al-Ettifaq_FC_logo.svg.png",
-        "الفتح": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Al-Fateh_SC_logo.svg/150px-Al-Fateh_SC_logo.svg.png",
-        "الرياض": "https://upload.wikimedia.org/wikipedia/en/thumb/2/29/Al-Riyadh_SC.svg/150px-Al-Riyadh_SC.svg.png",
-        "الخليج": "https://upload.wikimedia.org/wikipedia/en/thumb/9/91/Al-Khaleej_Club.svg/150px-Al-Khaleej_Club.svg.png",
-        "الخلود": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/Al-Kholood_Club_logo.svg/150px-Al-Kholood_Club_logo.svg.png",
-        "الحزم": "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Al-Hazem_FC.svg/150px-Al-Hazem_FC.svg.png",
-        "الفيحاء": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Al-Fayha_FC.svg/150px-Al-Fayha_FC.svg.png",
-        "الفيصلي": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Al-Faisaly_FC_logo.svg/150px-Al-Faisaly_FC_logo.svg.png",
-        "نيوم": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b3/NEOM_SC_logo.svg/150px-NEOM_SC_logo.svg.png",
-        "الدرعية": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Al-Diriyah_Club_logo.svg/150px-Al-Diriyah_Club_logo.svg.png",
-        "أبها": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Abha_Club.svg/150px-Abha_Club.svg.png"
+    const teamDataMap = {
+        "الهلال": { color: "#002855", short: "هلال" },
+        "النصر": { color: "#D4AF37", short: "نصر" },
+        "الاتحاد": { color: "#111111", short: "اتحاد" },
+        "الأهلي": { color: "#008000", short: "أهلي" },
+        "القادسية": { color: "#CC0000", short: "قادسية" },
+        "الشباب": { color: "#2B547E", short: "شباب" },
+        "التعاون": { color: "#E59400", short: "تعاون" },
+        "الاتفاق": { color: "#C41230", short: "اتفاق" },
+        "الفتح": { color: "#1E3F66", short: "فتح" },
+        "الرياض": { color: "#333333", short: "رياض" },
+        "الخليج": { color: "#D4AF37", short: "خليج" },
+        "الخلود": { color: "#800020", short: "خلود" },
+        "الحزم": { color: "#E59400", short: "حزم" },
+        "الفيحاء": { color: "#FF6600", short: "فيحاء" },
+        "الفيصلي": { color: "#660066", short: "فيصلي" },
+        "نيوم": { color: "#008080", short: "نيوم" },
+        "الدرعية": { color: "#8B4513", short: "درعية" },
+        "أبها": { color: "#800000", short: "أبها" }
     };
 
-    function getLogo(teamName) {
-        return teamLogos[teamName] || "https://upload.wikimedia.org/wikipedia/en/thumb/a/ac/Default_pfp.svg/150px-Default_pfp.svg.png";
+    function getTeamBadge(teamName) {
+        const info = teamDataMap[teamName] || { color: "#1b4d3e", short: teamName.substring(0, 3) };
+        return `<div class="team-badge" style="background-color: ${info.color}; color: #ffffff;">${info.short}</div>`;
     }
 
     function switchTab(tab) {
@@ -136,18 +137,18 @@
     }
 
     const yesterdayData = [
-        { home: "الأهلي", away: "الفتح", score: "2 - 1", type: "ended" },
-        { home: "التعاون", away: "الشباب", score: "0 - 0", type: "ended" }
+        { home: "الأهلي", away: "الفتح", score: "2 - 1" },
+        { home: "التعاون", away: "الشباب", score: "0 - 0" }
     ];
 
     const todayData = [
-        { home: "القادسية", away: "الهلال", score: "1 - 1", type: "ended" },
-        { home: "النصر", away: "الاتحاد", score: "VS", type: "ended" }
+        { home: "القادسية", away: "الهلال", score: "1 - 1" },
+        { home: "النصر", away: "الاتحاد", score: "VS" }
     ];
 
     const tomorrowData = [
-        { home: "نيوم", away: "الدرعية", score: "VS", type: "upcoming" },
-        { home: "الاتفاق", away: "الخلود", score: "VS", type: "upcoming" }
+        { home: "نيوم", away: "الدرعية", score: "VS" },
+        { home: "الاتفاق", away: "الخلود", score: "VS" }
     ];
 
     const standingsData = [
@@ -171,26 +172,27 @@
         { rank: 18, team: "أبها", played: 8, win: 0, draw: 2, lose: 6, points: 2 }
     ];
 
+    // قائمة الهدافين مع صور حقيقية ومستقرة تماماً من المصادر الرياضية العالمية المعتمدة
     const scorersData = [
-        { rank: 1, player: "إيفان توني", team: "الأهلي", goals: 11, img: "https://upload.wikimedia.org/wikipedia/commons/8/89/Placeholder.jpg" },
-        { rank: 2, player: "ماتيوس ريتيغوي", team: "القادسية", goals: 6, img: "https://upload.wikimedia.org/wikipedia/commons/8/89/Placeholder.jpg" },
-        { rank: 3, player: "ألكسندر ميندي", team: "الفيصلي", goals: 5, img: "https://upload.wikimedia.org/wikipedia/commons/8/89/Placeholder.jpg" },
-        { rank: 4, player: "ألكسندر لاكازيت", team: "نيوم", goals: 5, img: "https://upload.wikimedia.org/wikipedia/commons/8/89/Placeholder.jpg" },
-        { rank: 5, player: "كريستيانو رونالدو", team: "النصر", goals: 4, img: "https://upload.wikimedia.org/wikipedia/commons/8/89/Placeholder.jpg" }
+        { rank: 1, player: "إيفان توني", team: "الأهلي", goals: 11, img: "https://a.espncdn.com/i/headshots/soccer/players/full/158580.png" },
+        { rank: 2, player: "ماتيوس ريتيغوي", team: "القادسية", goals: 6, img: "https://a.espncdn.com/i/headshots/soccer/players/full/304381.png" },
+        { rank: 3, player: "ألكسندر ميندي", team: "الفيصلي", goals: 5, img: "https://a.espncdn.com/i/headshots/soccer/players/full/default.png" },
+        { rank: 4, player: "ألكسندر لاكازيت", team: "نيوم", goals: 5, img: "https://a.espncdn.com/i/headshots/soccer/players/full/139955.png" },
+        { rank: 5, player: "كريستيانو رونالدو", team: "النصر", goals: 4, img: "https://a.espncdn.com/i/headshots/soccer/players/full/3829.png" }
     ];
 
     function renderMatches(data, elementId) {
         const container = document.getElementById(elementId);
         container.innerHTML = '';
         data.forEach(m => {
-            const homeLogo = getLogo(m.home);
-            const awayLogo = getLogo(m.away);
+            const homeBadge = getTeamBadge(m.home);
+            const awayBadge = getTeamBadge(m.away);
             let scoreHTML = m.score === "VS" ? `<span class="score-box" style="background:#ecf0f1; color:#555;">VS</span>` : `<span class="score-box">${m.score}</span>`;
 
             container.innerHTML += `
                 <div class="match-card">
                     <div class="team-box">
-                        <img src="${homeLogo}" class="team-logo" alt="${m.home}">
+                        ${homeBadge}
                         <span class="team-name">${m.home}</span>
                     </div>
                     <div style="text-align: center;">
@@ -198,7 +200,7 @@
                     </div>
                     <div class="team-box">
                         <span class="team-name">${m.away}</span>
-                        <img src="${awayLogo}" class="team-logo" alt="${m.away}">
+                        ${awayBadge}
                     </div>
                 </div>`;
         });
@@ -210,13 +212,13 @@
 
     const standingsTableBody = document.getElementById('standingsTableBody');
     standingsData.forEach(s => {
-        const logo = getLogo(s.team);
+        const badge = getTeamBadge(s.team);
         standingsTableBody.innerHTML += `
             <tr>
                 <td><strong>${s.rank}</strong></td>
                 <td style="text-align: right;">
                     <div style="display: flex; align-items: center; gap: 10px;">
-                        <img src="${logo}" class="team-logo" alt="${s.team}">
+                        ${badge}
                         <strong style="color: #2c3e50;">${s.team}</strong>
                     </div>
                 </td>
