@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دوري روشن السعودي - المباريات والترتيب والهدافين</title>
+    <title>دوري روشن السعودي - الموقع الرسمي</title>
     <style>
         body { font-family: Tahoma, Arial, sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; color: #333; }
         .container { max-width: 950px; margin: 0 auto; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
@@ -12,7 +12,7 @@
         
         /* الأزرار */
         .nav-buttons { display: flex; justify-content: center; gap: 8px; margin-bottom: 25px; flex-wrap: wrap; }
-        .btn { background-color: #e0e0e0; color: #333; border: none; padding: 10px 16px; font-size: 14px; font-weight: bold; border-radius: 25px; cursor: pointer; transition: 0.3s; }
+        .btn { background-color: #e0e0e0; color: #333; border: none; padding: 10px 18px; font-size: 14px; font-weight: bold; border-radius: 25px; cursor: pointer; transition: 0.3s; }
         .btn.active { background-color: #1b4d3e; color: white; box-shadow: 0 4px 10px rgba(27, 77, 62, 0.3); }
         .btn:hover { background-color: #14382c; color: white; }
 
@@ -29,18 +29,15 @@
         
         .match-card { background: #fdfefe; border: 1px solid #e1e4e8; border-radius: 8px; padding: 15px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.03); }
         
+        /* شعارات الأندية والصور */
         .team-box { display: flex; align-items: center; justify-content: center; gap: 10px; width: 35%; }
-        .team-badge { width: 38px; height: 38px; background: #1b4d3e; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); border: 2px solid #d4af37; }
+        .team-logo { width: 40px; height: 40px; object-fit: contain; }
         .team-name { font-weight: bold; color: #1b4d3e; font-size: 15px; }
         
-        .score-box { font-size: 18px; font-weight: bold; color: #1b4d3e; background: #e8f5e9; padding: 5px 15px; border-radius: 20px; }
-        
-        .countdown-container { display: flex; justify-content: center; gap: 4px; align-items: center; }
-        .time-box { background-color: #1b4d3e; color: white; padding: 5px 8px; border-radius: 6px; text-align: center; min-width: 40px; font-size: 11px; font-weight: bold; }
-        .time-box span { display: block; font-size: 14px; }
-        .time-separator { font-weight: bold; color: #1b4d3e; font-size: 14px; }
+        .player-img { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid #1b4d3e; }
+        .player-info { display: flex; align-items: center; gap: 12px; }
 
-        .match-date-badge { font-size: 11px; color: #555; background: #f1f2f6; padding: 3px 8px; border-radius: 4px; margin-bottom: 6px; display: inline-block; font-weight: bold; }
+        .score-box { font-size: 18px; font-weight: bold; color: #1b4d3e; background: #e8f5e9; padding: 5px 15px; border-radius: 20px; }
         .no-match { text-align: center; color: #666; padding: 20px; font-size: 16px; }
     </style>
 </head>
@@ -48,7 +45,7 @@
 
 <div class="container">
     <h1>⚽ دوري روشن السعودي للمحترفين</h1>
-    <div class="subtitle">المباريات، الترتيب، وهدافو الدوري</div>
+    <div class="subtitle">المباريات، الترتيب، الشعارات، وهدافو الدوري</div>
 
     <!-- الأزرار -->
     <div class="nav-buttons">
@@ -93,7 +90,6 @@
         </table>
     </div>
 
-    <!-- قسم الهدافين الجديد -->
     <div id="scorersSection" class="section">
         <h3 style="color: #1b4d3e; text-align: right;">قائمة هدافي دوري روشن:</h3>
         <table>
@@ -111,18 +107,30 @@
 </div>
 
 <script>
-    function getTeamBadge(teamName) {
-        if (teamName === "الهلال") return "هـ";
-        if (teamName === "النصر") return "نـ";
-        if (teamName === "الاتحاد") return "اتـ";
-        if (teamName === "الأهلي") return "أهـ";
-        if (teamName === "القادسية") return "قـ";
-        if (teamName === "الشباب") return "شـ";
-        if (teamName === "التعاون") return "تعـ";
-        if (teamName === "الاتفاق") return "تفـ";
-        if (teamName === "الفتح") return "فتـ";
-        if (teamName === "الرياض") return "ريـ";
-        return teamName.substring(0, 2);
+    // روابط شعارات الأندية الرسمية
+    const teamLogos = {
+        "الهلال": "https://a.espncdn.com/i/teamlogos/soccer/500/4236.png",
+        "النصر": "https://a.espncdn.com/i/teamlogos/soccer/500/4237.png",
+        "الاتحاد": "https://a.espncdn.com/i/teamlogos/soccer/500/4238.png",
+        "الأهلي": "https://a.espncdn.com/i/teamlogos/soccer/500/4235.png",
+        "القادسية": "https://a.espncdn.com/i/teamlogos/soccer/500/21262.png",
+        "الشباب": "https://a.espncdn.com/i/teamlogos/soccer/500/4240.png",
+        "التعاون": "https://a.espncdn.com/i/teamlogos/soccer/500/13763.png",
+        "الاتفاق": "https://a.espncdn.com/i/teamlogos/soccer/500/4239.png",
+        "الفتح": "https://a.espncdn.com/i/teamlogos/soccer/500/13764.png",
+        "الرياض": "https://a.espncdn.com/i/teamlogos/soccer/500/18883.png",
+        "نيوم": "https://a.espncdn.com/i/teamlogos/soccer/500/default-team-logo-1.png",
+        "الدرعية": "https://a.espncdn.com/i/teamlogos/soccer/500/default-team-logo-2.png",
+        "الخلود": "https://a.espncdn.com/i/teamlogos/soccer/500/default-team-logo-3.png",
+        "الخليج": "https://a.espncdn.com/i/teamlogos/soccer/500/18880.png",
+        "الحزم": "https://a.espncdn.com/i/teamlogos/soccer/500/18879.png",
+        "الفيصلي": "https://a.espncdn.com/i/teamlogos/soccer/500/18881.png",
+        "الفيحاء": "https://a.espncdn.com/i/teamlogos/soccer/500/18882.png",
+        "أبها": "https://a.espncdn.com/i/teamlogos/soccer/500/18878.png"
+    };
+
+    function getLogo(teamName) {
+        return teamLogos[teamName] || "https://a.espncdn.com/i/teamlogos/soccer/500/default-team-logo-1.png";
     }
 
     function switchTab(tab) {
@@ -144,13 +152,9 @@
         { home: "النصر", away: "الاتحاد", score: "VS", type: "ended" }
     ];
 
-    const tomorrowDate = new Date();
-    tomorrowDate.setDate(tomorrowDate.getDate() + 1);
-    tomorrowDate.setHours(20, 0, 0, 0);
-
     const tomorrowData = [
-        { home: "نيوم", away: "الدرعية", time: tomorrowDate, type: "upcoming" },
-        { home: "الاتفاق", away: "الخلود", time: tomorrowDate, type: "upcoming" }
+        { home: "نيوم", away: "الدرعية", score: "VS", type: "upcoming" },
+        { home: "الاتفاق", away: "الخلود", score: "VS", type: "upcoming" }
     ];
 
     const standingsData = [
@@ -174,114 +178,53 @@
         { rank: 18, team: "أبها", played: 8, win: 0, draw: 2, lose: 6, points: 2 }
     ];
 
-    // بيانات الهدافين مأخوذة من صورتك بدقة
     const scorersData = [
-        { rank: 1, player: "إيفان توني", team: "الأهلي", goals: 11 },
-        { rank: 2, player: "ماتيوس ريتيغوي", team: "القادسية", goals: 6 },
-        { rank: 3, player: "ألكسندر ميندي", team: "الفيصلي", goals: 5 },
-        { rank: 4, player: "فرانسيسكو ترينتاو", team: "الأهلي", goals: 5 },
-        { rank: 5, player: "ألكسندر لاكازيت", team: "نيوم", goals: 5 },
-        { rank: 6, player: "ستيفن بيرغوين", team: "الاتحاد", goals: 5 },
-        { rank: 7, player: "يوسف النصيري", team: "الاتحاد", goals: 5 },
-        { rank: 8, player: "غابرييل مارتينيلي", team: "الهلال", goals: 5 },
-        { rank: 9, player: "جوليان دومينغ", team: "الخلود", goals: 4 },
-        { rank: 10, player: "كريستيانو رونالدو", team: "النصر", goals: 4 }
+        { rank: 1, player: "إيفان توني", team: "الأهلي", goals: 11, img: "https://a.espncdn.com/i/headshots/soccer/players/full/158580.png" },
+        { rank: 2, player: "ماتيوس ريتيغوي", team: "القادسية", goals: 6, img: "https://a.espncdn.com/i/headshots/soccer/players/full/304381.png" },
+        { rank: 3, player: "ألكسندر ميندي", team: "الفيصلي", goals: 5, img: "https://a.espncdn.com/i/headshots/soccer/players/full/default.png" },
+        { rank: 4, player: "ألكسندر لاكازيت", team: "نيوم", goals: 5, img: "https://a.espncdn.com/i/headshots/soccer/players/full/139955.png" },
+        { rank: 5, player: "كريستيانو رونالدو", team: "النصر", goals: 4, img: "https://a.espncdn.com/i/headshots/soccer/players/full/3829.png" }
     ];
 
     function renderMatches(data, elementId) {
         const container = document.getElementById(elementId);
         container.innerHTML = '';
-        if (data.length === 0) {
-            container.innerHTML = `<div class="no-match">لا توجد مباريات مسجلة.</div>`;
-            return;
-        }
-        data.forEach((m, index) => {
-            const homeBadge = getTeamBadge(m.home);
-            const awayBadge = getTeamBadge(m.away);
+        data.forEach(m => {
+            const homeLogo = getLogo(m.home);
+            const awayLogo = getLogo(m.away);
+            let scoreHTML = m.score === "VS" ? `<span class="score-box" style="background:#ecf0f1; color:#555;">VS</span>` : `<span class="score-box">${m.score}</span>`;
 
-            if (m.type === 'ended') {
-                container.innerHTML += `
-                    <div class="match-card">
-                        <div class="team-box">
-                            <div class="team-badge">${homeBadge}</div>
-                            <span class="team-name">${m.home}</span>
-                        </div>
-                        <div style="text-align: center;">
-                            <span class="score-box">${m.score}</span>
-                            <div class="match-date-badge">انتهت المباراة</div>
-                        </div>
-                        <div class="team-box">
-                            <span class="team-name">${m.away}</span>
-                            <div class="team-badge">${awayBadge}</div>
-                        </div>
-                    </div>`;
-            } else {
-                const uniqueId = `${elementId}-${index}`;
-                container.innerHTML += `
-                    <div class="match-card">
-                        <div class="team-box">
-                            <div class="team-badge">${homeBadge}</div>
-                            <span class="team-name">${m.home}</span>
-                        </div>
-                        <div style="text-align: center;">
-                            <div class="match-date-badge">الخميس، 22 أكتوبر 2026</div>
-                            <div class="countdown-container" id="cd-${uniqueId}">
-                                <div class="time-box"><span id="d-${uniqueId}">0</span>يوم</div>
-                                <div class="time-separator">:</div>
-                                <div class="time-box"><span id="h-${uniqueId}">00</span>ساعة</div>
-                                <div class="time-separator">:</div>
-                                <div class="time-box"><span id="m-${uniqueId}">00</span>دقيقة</div>
-                                <div class="time-separator">:</div>
-                                <div class="time-box"><span id="s-${uniqueId}">00</span>ثانية</div>
-                            </div>
-                        </div>
-                        <div class="team-box">
-                            <span class="team-name">${m.away}</span>
-                            <div class="team-badge">${awayBadge}</div>
-                        </div>
-                    </div>`;
-                startCountdown(m.time, uniqueId);
-            }
+            container.innerHTML += `
+                <div class="match-card">
+                    <div class="team-box">
+                        <img src="${homeLogo}" class="team-logo" alt="${m.home}">
+                        <span class="team-name">${m.home}</span>
+                    </div>
+                    <div style="text-align: center;">
+                        ${scoreHTML}
+                        <div style="font-size: 11px; color: #e67e22; margin-top: 5px; font-weight: bold;">التفاصيل</div>
+                    </div>
+                    <div class="team-box">
+                        <span class="team-name">${m.away}</span>
+                        <img src="${awayLogo}" class="team-logo" alt="${m.away}">
+                    </div>
+                </div>`;
         });
-    }
-
-    function startCountdown(targetDate, id) {
-        setInterval(() => {
-            const now = new Date();
-            const diff = targetDate - now;
-            if (diff <= 0) return;
-
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const secs = Math.floor((diff % (1000 * 60)) / 1000);
-
-            const dEl = document.getElementById(`d-${id}`);
-            const hEl = document.getElementById(`h-${id}`);
-            const mEl = document.getElementById(`m-${id}`);
-            const sEl = document.getElementById(`s-${id}`);
-
-            if (dEl) dEl.innerText = days;
-            if (hEl) hEl.innerText = String(hours).padStart(2, '0');
-            if (mEl) mEl.innerText = String(mins).padStart(2, '0');
-            if (sEl) sEl.innerText = String(secs).padStart(2, '0');
-        }, 1000);
     }
 
     renderMatches(yesterdayData, 'yesterdayList');
     renderMatches(todayData, 'todayList');
     renderMatches(tomorrowData, 'tomorrowList');
 
-    // تعبئة جدول الترتيب
     const standingsTableBody = document.getElementById('standingsTableBody');
     standingsData.forEach(s => {
-        const badge = getTeamBadge(s.team);
+        const logo = getLogo(s.team);
         standingsTableBody.innerHTML += `
             <tr>
                 <td><strong>${s.rank}</strong></td>
                 <td style="text-align: right;">
                     <div style="display: flex; align-items: center; gap: 10px;">
-                        <div class="team-badge">${badge}</div>
+                        <img src="${logo}" class="team-logo" alt="${s.team}">
                         <strong style="color: #2c3e50;">${s.team}</strong>
                     </div>
                 </td>
@@ -293,14 +236,18 @@
             </tr>`;
     });
 
-    // تعبئة جدول الهدافين
     const scorersTableBody = document.getElementById('scorersTableBody');
     scorersData.forEach(sc => {
         scorersTableBody.innerHTML += `
             <tr>
                 <td><strong>${sc.rank}</strong></td>
-                <td style="text-align: right; font-weight: bold; color: #2c3e50;">${sc.player}</td>
-                <td style="text-align: right; color: #555;">${sc.team}</td>
+                <td style="text-align: right;">
+                    <div class="player-info">
+                        <img src="${sc.img}" class="player-img" alt="${sc.player}">
+                        <strong style="color: #2c3e50;">${sc.player}</strong>
+                    </div>
+                </td>
+                <td style="text-align: right; color: #555; font-weight: bold;">${sc.team}</td>
                 <td><strong style="color: #1b4d3e; font-size: 16px;">${sc.goals}</strong></td>
             </tr>`;
     });
