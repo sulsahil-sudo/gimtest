@@ -31,7 +31,8 @@
         .team-badge { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 13px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); flex-shrink: 0; }
         .team-name { font-weight: bold; color: #1b4d3e; font-size: 15px; }
         
-        .player-img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #1b4d3e; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0; }
+        /* تصميم صور اللاعبين بحجم دقيق وإطار أنيق */
+        .player-img { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid #1b4d3e; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0; background-color: #e0e0e0; }
         .player-info { display: flex; align-items: center; gap: 15px; }
 
         .score-box { font-size: 16px; font-weight: bold; color: #1b4d3e; background: #e8f5e9; padding: 6px 14px; border-radius: 20px; }
@@ -42,7 +43,7 @@
 
 <div class="container">
     <h1>⚽ دوري روشن السعودي للمحترفين</h1>
-    <div class="subtitle">المباريات، الترتيب، شعارات الأندية، وصور الهدافين بدقة عالية</div>
+    <div class="subtitle">المباريات، الترتيب، شعارات الأندية، وصور الهدافين المحدثة</div>
 
     <div class="nav-buttons">
         <button id="btnYesterday" class="btn" onclick="switchTab('yesterday')">⏪ الأمس</button>
@@ -147,7 +148,6 @@
         { home: "النصر", away: "الاتحاد", score: "قيد المتابعة..." }
     ];
 
-    // أضفنا مواعيد محددة لمباريات بكرة لتعرض بشكل مرتب
     const tomorrowData = [
         { home: "نيوم", away: "الدرعية", time: "09:00 م" },
         { home: "الاتفاق", away: "الخلود", time: "06:35 م" }
@@ -174,6 +174,7 @@
         { rank: 18, team: "أبها", played: 8, win: 0, draw: 2, lose: 6, points: 2 }
     ];
 
+    // روابط صور اللاعبين الرسمية المباشرة والموثوقة والمجربة
     const scorersData = [
         { rank: 1, player: "إيفان توني", team: "الأهلي", goals: 11, img: "https://a.espncdn.com/i/headshots/soccer/players/full/158580.png" },
         { rank: 2, player: "ماتيوس ريتيغوي", team: "القادسية", goals: 6, img: "https://a.espncdn.com/i/headshots/soccer/players/full/304381.png" },
@@ -189,12 +190,7 @@
             const homeBadge = getTeamBadge(m.home);
             const awayBadge = getTeamBadge(m.away);
             
-            let centerHTML = '';
-            if (isTomorrow) {
-                centerHTML = `<span class="time-badge">⏰ ${m.time}</span>`;
-            } else {
-                centerHTML = `<span class="score-box">${m.score}</span>`;
-            }
+            let centerHTML = isTomorrow ? `<span class="time-badge">⏰ ${m.time}</span>` : `<span class="score-box">${m.score}</span>`;
 
             container.innerHTML += `
                 <div class="match-card">
@@ -215,7 +211,7 @@
 
     renderMatches(yesterdayData, 'yesterdayList');
     renderMatches(todayData, 'todayList');
-    renderMatches(tomorrowData, 'tomorrowList', true); // تمرير علامة مباريات بكرة لإظهار المواعيد
+    renderMatches(tomorrowData, 'tomorrowList', true);
 
     const standingsTableBody = document.getElementById('standingsTableBody');
     standingsData.forEach(s => {
@@ -244,7 +240,7 @@
                 <td><strong>${sc.rank}</strong></td>
                 <td style="text-align: right;">
                     <div class="player-info">
-                        <img src="${sc.img}" class="player-img" alt="${sc.player}">
+                        <img src="${sc.img}" class="player-img" alt="${sc.player}" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/8/89/Placeholder.jpg'">
                         <strong style="color: #2c3e50;">${sc.player}</strong>
                     </div>
                 </td>
