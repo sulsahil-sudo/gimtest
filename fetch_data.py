@@ -243,35 +243,30 @@ assists = []
 
 try:
     print("\nجلب الهدافين...")
+    data = fetch_smart("https://site.api.espn.com/apis/site/v2/sports/soccer/ksa.1/statistics")
 
-    data = fetch_smart(
-    "https://site.api.espn.com/apis/site/v2/sports/soccer/ksa.1/statistics"
-)
+    if data:
+        for stat in data.get("stats", []):
+            if stat.get("name") == "goalsLeaders":
+                for p in stat.get("leaders", []):
+                    scorers.append({
+                        "name": p["athlete"]["displayName"],
+                        "team": tr(p["athlete"]["team"]["displayName"]),
+                        "goals": int(p["value"])
+                    })
 
-if data:
-    for stat in data.get("stats", []):
-
-        if stat.get("name") == "goalsLeaders":
-            for p in stat.get("leaders", []):
-                scorers.append({
-                    "name": p["athlete"]["displayName"],
-                    "team": tr(p["athlete"]["team"]["displayName"]),
-                    "goals": int(p["value"])
-                })
-
-        if stat.get("name") == "assistsLeaders":
-            for p in stat.get("leaders", []):
-                assists.append({
-                    "name": p["athlete"]["displayName"],
-                    "team": tr(p["athlete"]["team"]["displayName"]),
-                    "assists": int(p["value"])
-                })
+            if stat.get("name") == "assistsLeaders":
+                for p in stat.get("leaders", []):
+                    assists.append({
+                        "name": p["athlete"]["displayName"],
+                        "team": tr(p["athlete"]["team"]["displayName"]),
+                        "assists": int(p["value"])
+                    })
 
     print(f"عدد الهدافين: {len(scorers)}")
 
 except Exception as ex:
     print("خطأ الهدافين:", ex)
-
 output = {
     "standings": standings,
     "results": results,
