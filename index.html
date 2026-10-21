@@ -1,374 +1,68 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#1a5490">
-<title>الدوري السعودي - إحصائيات</title>
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Segoe UI', 'Tahoma', Arial, sans-serif; background: #f0f2f5; padding: 0 15px 15px; color: #333; }
-  .sticky-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: #f0f2f5;
-    padding: 15px 0 10px;
-    margin: 0 -15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-shadow: 0 4px 8px -2px rgba(0,0,0,0.05);
-  }
-
-  h1 { text-align: center; margin-bottom: 15px; color: #1a5490; font-size: 22px; }
-  .tabs-wrap { overflow-x: auto; margin-bottom: 0; border-radius: 10px; }
-  .tabs-wrap::-webkit-scrollbar { display: none; }
-  .tabs { display: flex; gap: 6px; background: white; padding: 6px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); min-width: max-content; }
-  .tab { padding: 10px 16px; border: none; background: transparent; cursor: pointer; font-size: 14px; font-weight: bold; color: #555; border-radius: 8px; font-family: inherit; white-space: nowrap; }
-  .tab.active { background: #1a5490; color: white; }
-  .tab.active-live { background: #c0392b; color: white; }
-
-  .content { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-top: 15px; }
-  .hidden { display: none; }
-  .table-wrap { overflow-x: auto; }
-  table { width: 100%; border-collapse: collapse; min-width: 600px; }
-  th { background: #1a5490; color: white; padding: 10px 8px; text-align: center; font-size: 13px; white-space: nowrap; }
-  td { padding: 8px; text-align: center; border-bottom: 1px solid #eee; font-size: 13px; }
-  .team { text-align: right; font-weight: bold; }
-  .team-logo { width: 28px; height: 28px; object-fit: contain; flex-shrink: 0; }
-
-  .team-link {
-    display: flex; align-items: center; gap: 8px; justify-content: flex-end;
-    text-decoration: none; color: #1a5490; font-weight: bold;
-    padding: 4px 6px; border-radius: 6px; transition: 0.2s; cursor: pointer;
-    border: none; background: transparent; font-family: inherit; font-size: 13px;
-  }
-  .team-link:hover { background: #e8f4fd; color: #c0392b; }
-  .team-link:hover .team-logo { transform: scale(1.1); }
-  .team-link::after { content: 'ℹ️'; font-size: 12px; opacity: 0.4; }
-  .team-link:hover::after { opacity: 1; }
-
-  tr:hover { background: #f8f9fa; }
-  tr.live-team { background: #fff5f5; }
-  .loading, .empty { text-align: center; color: #888; padding: 40px; font-size: 15px; }
-  .search-bar { margin-bottom: 15px; display: flex; gap: 8px; flex-wrap: wrap; }
-  .search-bar input, .search-bar select { padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; font-family: inherit; flex: 1; min-width: 120px; }
-  
-  .match-filters { display: flex; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; justify-content: flex-end; }
-  .filter-btn { padding: 8px 14px; border: 2px solid #e0e0e0; background: white; border-radius: 25px; cursor: pointer; font-size: 13px; font-weight: bold; color: #555; font-family: inherit; display: flex; align-items: center; gap: 6px; }
-  .filter-btn.active { background: #1a5490; color: white; border-color: #1a5490; }
-  .filter-btn .count { display: inline-block; background: rgba(0,0,0,0.08); padding: 1px 8px; border-radius: 10px; font-size: 11px; }
-  .filter-btn.active .count { background: rgba(255,255,255,0.25); color: white; }
-
-  .match-card { border: 1px solid #eee; border-radius: 10px; padding: 12px; margin-bottom: 10px; }
-  .match-card.live { border-color: #c0392b; border-width: 2px; }
-  .match-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 12px; color: #666; gap: 8px; flex-wrap: wrap; }
-  .match-status { background: #e8f4fd; color: #1a5490; padding: 3px 8px; border-radius: 6px; font-size: 11px; font-weight: bold; white-space: nowrap; }
-  .match-status.live { background: #fee; color: #c0392b; }
-  .match-status.finished { background: #e8f8e8; color: #27ae60; }
-  .match-body { display: flex; justify-content: space-between; align-items: center; gap: 15px; }
-  .match-team-block { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 33%; cursor: pointer; padding: 5px; border-radius: 8px; transition: 0.2s; border: none; background: transparent; font-family: inherit; }
-  .match-team-block:hover { background: #e8f4fd; }
-  .match-team-logo { width: 50px; height: 50px; object-fit: contain; }
-  .match-team { font-weight: bold; font-size: 14px; text-align: center; color: #1a5490; }
-  .match-team-block:hover .match-team { color: #c0392b; }
-  .match-center { width: 33%; text-align: center; }
-  .match-score { background: #1a5490; color: white; padding: 10px 18px; border-radius: 8px; font-weight: bold; font-size: 20px; display: inline-block; }
-  .match-score.live-score { background: #c0392b; }
-  .countdown { display: flex; justify-content: center; align-items: center; gap: 4px; direction: ltr; }
-  .cd-box { background: linear-gradient(135deg, #1a5490, #2c6db5); color: white; padding: 6px 8px; border-radius: 6px; min-width: 42px; text-align: center; }
-  .cd-num { font-size: 16px; font-weight: bold; line-height: 1; }
-  .cd-label { font-size: 9px; opacity: 0.85; margin-top: 2px; }
-  .cd-sep { color: #1a5490; font-size: 16px; font-weight: bold; padding: 0 1px; }
-  .updated { text-align: center; color: #888; font-size: 11px; margin-top: 12px; }
-  .pos-badge { display: inline-block; padding: 3px 8px; border-radius: 6px; font-size: 11px; font-weight: bold; }
-  .pos-badge.GK { background: #fff4e0; color: #b8860b; }
-  .pos-badge.DF { background: #e8f8e8; color: #27ae60; }
-  .pos-badge.MF { background: #e8f4fd; color: #1a5490; }
-  .pos-badge.FW { background: #fdeaea; color: #c0392b; }
-  .number-badge { display: inline-flex; align-items: center; justify-content: center; background: #1a5490; color: white; width: 28px; height: 28px; border-radius: 50%; font-weight: bold; font-size: 12px; padding: 0; line-height: 1; }
-  .rank-badge { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: #e8f4fd; color: #1a5490; font-weight: bold; font-size: 12px; padding: 0; line-height: 1; }
-  .rank-badge.gold { background: #ffd700; color: #333; }
-  .rank-badge.silver { background: #c0c0c0; color: #333; }
-  .rank-badge.bronze { background: #cd7f32; color: white; }
-  .change-up { color: #27ae60; font-weight: bold; }
-  .change-down { color: #c0392b; font-weight: bold; }
-  .live-banner { background: linear-gradient(135deg, #c0392b, #e74c3c); color: white; padding: 12px; border-radius: 10px; margin-bottom: 12px; text-align: center; font-weight: bold; font-size: 14px; }
-  .live-banner .live-dot { display: inline-block; width: 8px; height: 8px; background: white; border-radius: 50%; margin-right: 8px; animation: pulse 1s infinite; }
-  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
-  .live-info { text-align: center; font-size: 12px; color: #666; margin-bottom: 12px; padding: 10px; background: #fef9e7; border-radius: 6px; line-height: 1.6; }
-
-  .player-name-cell {
-    color: #1a5490;
-    font-weight: bold;
-    font-size: 13px;
-  }
-
-  .modal-overlay {
-    position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6);
-    z-index: 1000; display: flex; align-items: center; justify-content: center;
-    padding: 15px; opacity: 0; visibility: hidden; transition: 0.3s;
-  }
-  .modal-overlay.open { opacity: 1; visibility: visible; }
-  .modal-content {
-    background: white; border-radius: 15px; max-width: 700px; width: 100%;
-    max-height: 90vh; overflow-y: auto;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    transform: scale(0.9); transition: 0.3s; position: relative;
-  }
-  .modal-overlay.open .modal-content { transform: scale(1); }
-  .modal-close {
-    position: absolute; top: 12px; left: 12px;
-    background: #c0392b; color: white; border: none; border-radius: 50%;
-    width: 36px; height: 36px; font-size: 20px; cursor: pointer;
-    z-index: 10; line-height: 1; transition: 0.2s;
-  }
-  .modal-close:hover { background: #a93226; transform: rotate(90deg); }
-  .modal-header {
-    background: linear-gradient(135deg, #1a5490, #2c6db5);
-    color: white; padding: 25px 20px; text-align: center;
-    border-radius: 15px 15px 0 0;
-  }
-  .modal-header .team-logo-big {
-    width: 90px; height: 90px; object-fit: contain;
-    margin-bottom: 10px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-  }
-  .modal-header h2 { font-size: 26px; margin-bottom: 5px; }
-  .modal-header .subtitle { font-size: 13px; opacity: 0.9; }
-  .modal-body { padding: 20px; }
-  .modal-section { margin-bottom: 25px; }
-  .modal-section-title {
-    font-size: 16px; font-weight: bold; color: #1a5490;
-    margin-bottom: 12px; padding-bottom: 8px;
-    border-bottom: 2px solid #e8f4fd;
-    display: flex; align-items: center; gap: 8px;
-  }
-  .stats-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 10px;
-  }
-  .stat-card {
-    background: #f8f9fa; border-radius: 10px; padding: 12px;
-    text-align: center; border: 1px solid #eee;
-  }
-  .stat-card .stat-value { font-size: 24px; font-weight: bold; color: #1a5490; line-height: 1; }
-  .stat-card .stat-label { font-size: 11px; color: #666; margin-top: 5px; }
-  .stat-card.gold { background: #fff9e0; border-color: #ffd700; }
-  .stat-card.gold .stat-value { color: #b8860b; }
-
-  .players-mini-grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 8px;
-  }
-  .player-mini {
-    background: #f8f9fa; border-radius: 8px; padding: 8px 10px;
-    display: flex; align-items: center; gap: 8px;
-    font-size: 12px; border: 1px solid #eee;
-  }
-  .player-mini .num {
-    background: #1a5490; color: white; width: 24px; height: 24px;
-    border-radius: 50%; display: inline-flex; align-items: center;
-    justify-content: center; font-weight: bold; font-size: 11px; flex-shrink: 0;
-  }
-  .player-mini .name {
-    flex: 1; overflow: hidden; text-overflow: ellipsis;
-    white-space: nowrap; color: #333;
-  }
-  .player-mini .pos-tag { font-size: 10px; padding: 2px 5px; border-radius: 4px; background: #e8f4fd; color: #1a5490; }
-
-  .match-mini {
-    display: flex; align-items: center; gap: 8px;
-    background: #f8f9fa; border-radius: 8px; padding: 8px;
-    margin-bottom: 6px; font-size: 12px; border: 1px solid #eee;
-  }
-  .match-mini .date { font-size: 10px; color: #666; min-width: 70px; }
-  .match-mini .team { font-weight: bold; flex: 1; text-align: center; }
-  .match-mini .score { background: #1a5490; color: white; padding: 3px 8px; border-radius: 5px; font-weight: bold; min-width: 40px; text-align: center; }
-  .match-mini .score.live { background: #c0392b; }
-  .match-mini .score.upcoming { background: #e8f4fd; color: #1a5490; font-size: 10px; }
-
-  @media (max-width: 600px) {
-    body { padding: 0 8px 8px; }
-    .sticky-header { padding: 10px 8px 8px; margin: 0 -8px; }
-    h1 { font-size: 17px; margin-bottom: 10px; }
-    .content { padding: 8px; margin-top: 10px; }
-    .tab { padding: 8px 12px; font-size: 13px; }
-
-    #standings .table-wrap { overflow-x: auto; }
-    #standings table { min-width: 100%; font-size: 11px; }
-    #standings th, #standings td { padding: 6px 3px; font-size: 11px; }
-    #standings th:nth-child(3), #standings td:nth-child(3),
-    #standings th:nth-child(7), #standings td:nth-child(7),
-    #standings th:nth-child(8), #standings td:nth-child(8) { display: none; }
-    #standings .team { font-size: 12px; }
-    #standings .rank-badge { width: 20px; height: 20px; font-size: 11px; }
-    #standings .team-logo { width: 22px; height: 22px; }
-    .team-link { gap: 4px; padding: 2px 4px; font-size: 12px; }
-    .team-link::after { font-size: 10px; }
-
-    #players table { min-width: 100%; }
-    #players thead { display: none; }
-    #players tbody tr {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: white;
-      border-bottom: 1px solid #f0f0f0;
-      padding: 8px 4px;
-      font-size: 12px;
-      gap: 6px;
-    }
-    #players tbody tr:last-child { border-bottom: none; }
-    #players tbody td {
-      display: inline-block;
-      padding: 0;
-      border: none;
-      text-align: right;
-      font-size: 12px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    #players tbody td::before { content: none; }
-    #players tbody td:nth-child(1) { flex-shrink: 0; width: auto; }
-    #players tbody td:nth-child(2) {
-      flex: 1;
-      text-align: right;
-      font-weight: bold;
-      color: #1a5490;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    #players tbody td:nth-child(3) {
-      flex-shrink: 0;
-      font-size: 11px;
-      color: #666;
-      padding-right: 6px;
-    }
-    #players tbody td:nth-child(4) { flex-shrink: 0; }
-    #players tbody td:nth-child(5) { display: none; }
-    #players tbody td:nth-child(6) { display: none; }
-    #players .number-badge { width: 24px; height: 24px; font-size: 11px; }
-    #players .pos-badge { font-size: 10px; padding: 2px 6px; }
-
-    .match-filters { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 8px; margin-bottom: 12px; }
-    .match-filters::-webkit-scrollbar { display: none; }
-    .filter-btn { white-space: nowrap; padding: 8px 12px; font-size: 12px; flex-shrink: 0; }
-
-    .match-card { padding: 10px 8px; margin-bottom: 8px; }
-    .match-header { margin-bottom: 10px; font-size: 11px; }
-    .match-status { font-size: 10px; padding: 2px 6px; }
-
-    .match-body {
-      display: flex !important;
-      justify-content: space-between !important;
-      align-items: center !important;
-    }
-    .match-team-logo { width: 45px; height: 45px; }
-    .match-team { font-size: 12px; }
-    .match-score { font-size: 18px; padding: 8px 14px; }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مترجم أسماء اللاعبين</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f9; }
+        #results { margin-top: 20px; }
+        .player-card { margin-bottom: 15px; padding: 15px; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-right: 4px solid #007bff; }
+    </style>
 </head>
 <body>
 
-<div class="sticky-header">
-  <h1>⚽ الدوري السعودي للمحترفين</h1>
-  <div class="tabs-wrap">
-    <div class="tabs">
-      <button class="tab active" onclick="showTab('standings', this)" id="tabStandings">الترتيب</button>
-      <button class="tab" onclick="showTab('live', this)" id="tabLive" style="display:none;">🔴 ترتيب حي</button>
-      <button class="tab" onclick="showTab('results', this)">المباريات</button>
-      <button class="tab" onclick="showTab('players', this)">اللاعبون</button>
-      <button class="tab" onclick="showTab('scorers', this)">🏆 الهدافون</button>
-      <button class="tab" onclick="showTab('assists', this)">🎯 صناع الأهداف</button>
-    </div>
-  </div>
-</div>
+    <h2>قائمة اللاعبين المترجمة</h2>
+    <div id="results">جاري تحميل البيانات...</div>
 
-<div id="standings" class="content">
-  <div class="table-wrap"><table>
-    <thead><tr><th>#</th><th>الفريق</th><th>لعب</th><th>فاز</th><th>تعادل</th><th>خسر</th><th>له</th><th>عليه</th><th>الفرق</th><th>النقاط</th></tr></thead>
-    <tbody id="standingsBody"><tr><td colspan="10" class="loading">جاري التحميل...</td></tr></tbody>
-  </table></div>
-  <div id="updatedStandings" class="updated"></div>
-</div>
+    <script>
+        // القاموس كامل داخل نفس الملف
+        window.playerNames = {
+          "Francisco Trincão": "فرانسيسكو ترينتساو",
+          "Eduard Spertsyan": "إدوارد سبيرتسيان",
+          "Feras Al-Brikan": "فراس البريكان",
+          "Meshal Ibrahim Al Mutairi": "مشعل إبراهيم المطيري",
+          "Cristiano Ronaldo": "كريستيانو رونالدو",
+          "Sadio Mané": "ساديو ماني",
+          "Salem Al-Dawsari": "سالم الدوسري"
+          // يمكنك لصق باقي القاموس الخاص بك هنا
+        };
 
-<div id="live" class="content hidden">
-  <div class="live-banner"><span class="live-dot"></span> الترتيب الحي أثناء المباريات</div>
-  <div id="liveMatchesInfo" class="live-info"></div>
-  <div class="table-wrap"><table>
-    <thead><tr><th>#</th><th>الفريق</th><th>لعب</th><th>فاز</th><th>تعادل</th><th>خسر</th><th>له</th><th>عليه</th><th>الفرق</th><th>النقاط</th></tr></thead>
-    <tbody id="liveBody"></tbody>
-  </table></div>
-  <div class="updated">⚠️ ترتيب افتراضي ومؤقت.</div>
-</div>
+        window.translatePlayer = function(name) {
+          if (!name) return '';
+          if (playerNames[name]) return playerNames[name];
+          var lower = name.toLowerCase();
+          for (var k in playerNames) {
+            if (k.toLowerCase() === lower) return playerNames[k];
+          }
+          return name; 
+        };
 
-<div id="players" class="content hidden">
-  <div class="search-bar">
-    <input type="text" id="playerSearch" placeholder="ابحث باسم اللاعب..." oninput="filterPlayers()">
-    <select id="teamFilter" onchange="filterPlayers()"><option value="">كل الفرق</option></select>
-    <select id="posFilter" onchange="filterPlayers()">
-      <option value="">كل المراكز</option>
-      <option value="GK">حراس المرمى</option>
-      <option value="DF">المدافعون</option>
-      <option value="MF">لاعبو الوسط</option>
-      <option value="FW">المهاجمون</option>
-    </select>
-  </div>
-  <div class="table-wrap"><table>
-    <thead><tr><th>#</th><th>اللاعب</th><th>الفريق</th><th>المركز</th><th>العمر</th><th>الجنسية</th></tr></thead>
-    <tbody id="playersBody"><tr><td colspan="6" class="loading">جاري التحميل...</td></tr></tbody>
-  </table></div>
-  <div id="playerCount" class="updated"></div>
-</div>
+        // جلب البيانات من ملف data.json
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = ''; 
 
-<div id="scorers" class="content hidden">
-  <div class="table-wrap"><table>
-    <thead><tr><th>#</th><th>اللاعب</th><th>الفريق</th><th>الأهداف</th></tr></thead>
-    <tbody id="scorersBody"><tr><td colspan="4" class="loading">جاري التحميل...</td></tr></tbody>
-  </table></div>
-</div>
-
-<div id="assists" class="content hidden">
-  <div class="table-wrap"><table>
-    <thead><tr><th>#</th><th>اللاعب</th><th>الفريق</th><th>صناعة</th></tr></thead>
-    <tbody id="assistsBody"><tr><td colspan="4" class="loading">جاري التحميل...</td></tr></tbody>
-  </table></div>
-</div>
-
-<div id="results" class="content hidden">
-  <div class="match-filters" id="matchFilters"></div>
-  <div id="resultsData" class="loading">جاري التحميل...</div>
-</div>
-
-<div class="modal-overlay" id="teamModal" onclick="closeModal(event)">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="modal-close" onclick="closeModal()">✕</button>
-    <div id="modalInnerContent"></div>
-  </div>
-</div>
-
-<script src="names.js"></script>
-<script>
-var teamLogos = {
-  "الهلال": "https://a.espncdn.com/i/teamlogos/soccer/500/929.png",
-  "الاتحاد": "https://a.espncdn.com/i/teamlogos/soccer/500/2276.png",
-  "النصر": "https://a.espncdn.com/i/teamlogos/soccer/500/817.png",
-  "القادسية": "https://a.espncdn.com/i/teamlogos/soccer/500/22022.png",
-  "نيوم": "https://a.espncdn.com/i/teamlogos/soccer/500/130899.png",
-  "الأهلي": "https://a.espncdn.com/i/teamlogos/soccer/500/8346.png",
-  "الخلود": "https://a.espncdn.com/i/teamlogos/soccer/500/22028.png",
-  "الدرعية": "https://a.espncdn.com/i/teamlogos/soccer/500/131746.png",
-  "الاتفاق": "https://a.espncdn.com/i/teamlogos/soccer/500/8363.png",
-  "الحزم": "https://a.espncdn.com/i/teamlogos/soccer/500/21964.png",
-  "الرياض": "https://a.espncdn.com/i/teamlogos/soccer/500/21965.png",
-  "الفيحاء": "https://a.espncdn.com/i/teamlogos/soccer/500/21827.png",
-  "الخليج": "https://a.espncdn.com/i/teamlogos/soccer/500/21829.png",
-  "الشباب": "https://a.espncdn.com/i/teamlogos/soccer/500/793.png",
-  "الفتح": "https://a.espncdn.com/i/teamlogos/soccer/500/13033.png",
-  "الفيصلي": "https://a.espncdn.com/i/teamlogos/soccer/500/21446.png",
-  "التعاون": "https://a.espncdn.com/i/teamlogos/soccer/500/18459.png",
-  "أبها": "https://a.espncdn.com/i/teamlogos/soccer/500/21833.png"
-};
+                    data.players.forEach(player => {
+                        const arabicName = window.translatePlayer(player.englishName);
+                        const playerHtml = `
+                            <div class="player-card">
+                                <strong>الاسم الإنجليزي:</strong> ${player.englishName} <br>
+                                <strong>الاسم العربي:</strong> ${arabicName} <br>
+                                <strong>النادي:</strong> ${player.club}
+                            </div>
+                        `;
+                        resultsDiv.innerHTML += playerHtml;
+                    });
+                })
+                .catch(error => {
+                    console.error('حدث خطأ:', error);
+                    document.getElementById('results').innerHTML = 'تعذر تحميل البيانات من ملف JSON.';
+                });
+        });
+    </script>
+</body>
+</html>
