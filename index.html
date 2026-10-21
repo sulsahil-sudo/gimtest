@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#1a5490">
-<title>منصة رادار كرة القدم الشاملة</title>
+<title>الدوري السعودي - إحصائيات</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Segoe UI', 'Tahoma', Arial, sans-serif; background: #f0f2f5; padding: 0 15px 15px; color: #333; }
@@ -21,10 +21,7 @@
     box-shadow: 0 4px 8px -2px rgba(0,0,0,0.05);
   }
 
-  .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px; }
-  h1 { color: #1a5490; font-size: 20px; margin: 0; }
-  .league-select { padding: 8px 14px; border-radius: 8px; font-weight: bold; background: #1a5490; color: white; border: none; font-family: inherit; cursor: pointer; font-size: 13px; }
-
+  h1 { text-align: center; margin-bottom: 15px; color: #1a5490; font-size: 22px; }
   .tabs-wrap { overflow-x: auto; margin-bottom: 0; border-radius: 10px; }
   .tabs-wrap::-webkit-scrollbar { display: none; }
   .tabs { display: flex; gap: 6px; background: white; padding: 6px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); min-width: max-content; }
@@ -102,7 +99,11 @@
   @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
   .live-info { text-align: center; font-size: 12px; color: #666; margin-bottom: 12px; padding: 10px; background: #fef9e7; border-radius: 6px; line-height: 1.6; }
 
-  .player-name-cell { color: #1a5490; font-weight: bold; font-size: 13px; }
+  .player-name-cell {
+    color: #1a5490;
+    font-weight: bold;
+    font-size: 13px;
+  }
 
   .modal-overlay {
     position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6);
@@ -190,23 +191,90 @@
   @media (max-width: 600px) {
     body { padding: 0 8px 8px; }
     .sticky-header { padding: 10px 8px 8px; margin: 0 -8px; }
-    h1 { font-size: 16px; }
+    h1 { font-size: 17px; margin-bottom: 10px; }
     .content { padding: 8px; margin-top: 10px; }
     .tab { padding: 8px 12px; font-size: 13px; }
+
+    #standings .table-wrap { overflow-x: auto; }
+    #standings table { min-width: 100%; font-size: 11px; }
+    #standings th, #standings td { padding: 6px 3px; font-size: 11px; }
+    #standings th:nth-child(3), #standings td:nth-child(3),
+    #standings th:nth-child(7), #standings td:nth-child(7),
+    #standings th:nth-child(8), #standings td:nth-child(8) { display: none; }
+    #standings .team { font-size: 12px; }
+    #standings .rank-badge { width: 20px; height: 20px; font-size: 11px; }
+    #standings .team-logo { width: 22px; height: 22px; }
+    .team-link { gap: 4px; padding: 2px 4px; font-size: 12px; }
+    .team-link::after { font-size: 10px; }
+
+    #players table { min-width: 100%; }
+    #players thead { display: none; }
+    #players tbody tr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+      border-bottom: 1px solid #f0f0f0;
+      padding: 8px 4px;
+      font-size: 12px;
+      gap: 6px;
+    }
+    #players tbody tr:last-child { border-bottom: none; }
+    #players tbody td {
+      display: inline-block;
+      padding: 0;
+      border: none;
+      text-align: right;
+      font-size: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    #players tbody td::before { content: none; }
+    #players tbody td:nth-child(1) { flex-shrink: 0; width: auto; }
+    #players tbody td:nth-child(2) {
+      flex: 1;
+      text-align: right;
+      font-weight: bold;
+      color: #1a5490;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    #players tbody td:nth-child(3) {
+      flex-shrink: 0;
+      font-size: 11px;
+      color: #666;
+      padding-right: 6px;
+    }
+    #players tbody td:nth-child(4) { flex-shrink: 0; }
+    #players tbody td:nth-child(5) { display: none; }
+    #players tbody td:nth-child(6) { display: none; }
+    #players .number-badge { width: 24px; height: 24px; font-size: 11px; }
+    #players .pos-badge { font-size: 10px; padding: 2px 6px; }
+
+    .match-filters { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 8px; margin-bottom: 12px; }
+    .match-filters::-webkit-scrollbar { display: none; }
+    .filter-btn { white-space: nowrap; padding: 8px 12px; font-size: 12px; flex-shrink: 0; }
+
+    .match-card { padding: 10px 8px; margin-bottom: 8px; }
+    .match-header { margin-bottom: 10px; font-size: 11px; }
+    .match-status { font-size: 10px; padding: 2px 6px; }
+
+    .match-body {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+    }
+    .match-team-logo { width: 45px; height: 45px; }
+    .match-team { font-size: 12px; }
+    .match-score { font-size: 18px; padding: 8px 14px; }
   }
 </style>
 </head>
 <body>
 
 <div class="sticky-header">
-  <div class="header-top">
-    <h1>⚽ رادار كرة القدم</h1>
-    <select id="leagueSelect" class="league-select" onchange="changeLeague(this.value)">
-      <option value="roshen">🇸🇦 دوري روشن السعودي</option>
-      <option value="gulf">🏆 الدوريات الخليجية</option>
-      <option value="europe">🇪🇺 الدوريات الأوروبية</option>
-    </select>
-  </div>
+  <h1>⚽ الدوري السعودي للمحترفين</h1>
   <div class="tabs-wrap">
     <div class="tabs">
       <button class="tab active" onclick="showTab('standings', this)" id="tabStandings">الترتيب</button>
@@ -234,7 +302,7 @@
     <thead><tr><th>#</th><th>الفريق</th><th>لعب</th><th>فاز</th><th>تعادل</th><th>خسر</th><th>له</th><th>عليه</th><th>الفرق</th><th>النقاط</th></tr></thead>
     <tbody id="liveBody"></tbody>
   </table></div>
-  <div class="updated">⚠️ يتم التحديث تلقائياً للمباريات الجارية.</div>
+  <div class="updated">⚠️ ترتيب افتراضي ومؤقت.</div>
 </div>
 
 <div id="players" class="content hidden">
@@ -272,7 +340,7 @@
 
 <div id="results" class="content hidden">
   <div class="match-filters" id="matchFilters"></div>
-  <div id="resultsData" class="loading">جاري التحميل...</td></div>
+  <div id="resultsData" class="loading">جاري التحميل...</div>
 </div>
 
 <div class="modal-overlay" id="teamModal" onclick="closeModal(event)">
@@ -304,481 +372,3 @@ var teamLogos = {
   "التعاون": "https://a.espncdn.com/i/teamlogos/soccer/500/18459.png",
   "أبها": "https://a.espncdn.com/i/teamlogos/soccer/500/21833.png"
 };
-
-var countryMap = {
-  "Saudi Arabia":"السعودية","Portugal":"البرتغال","Brazil":"البرازيل","France":"فرنسا",
-  "Argentina":"الأرجنتين","Spain":"إسبانيا","Germany":"ألمانيا","Italy":"إيطاليا",
-  "England":"إنجلترا","Netherlands":"هولندا","Belgium":"بلجيكا","Senegal":"السنغال",
-  "Morocco":"المغرب","Egypt":"مصر","Algeria":"الجزائر","Tunisia":"تونس","Iraq":"العراق"
-};
-
-function translateName(name) {
-  if (!name) return '';
-  if (window.playerNames && Object.prototype.hasOwnProperty.call(window.playerNames, name)) {
-    return window.playerNames[name];
-  }
-  return name;
-}
-
-function translateCountry(c) {
-  if (!c) return '—';
-  if (countryMap[c]) return countryMap[c];
-  for (var k in countryMap) if (k.toLowerCase() === c.toLowerCase()) return countryMap[k];
-  return c;
-}
-
-function teamLogoHTML(teamName) {
-  var logo = teamLogos[teamName];
-  if (logo) {
-    return '<img src="' + logo + '" alt="' + teamName + '" class="team-logo" onerror="this.style.display=\'none\'">';
-  }
-  return '';
-}
-
-function teamLinkHTML(teamName, withLogo) {
-  var logoHtml = withLogo ? teamLogoHTML(teamName) : '';
-  return '<button class="team-link" onclick="openTeamModal(\'' + teamName.replace(/'/g, "\\'") + '\')">' + teamName + logoHtml + '</button>';
-}
-
-function teamMatchLinkHTML(teamName) {
-  var logo = teamLogos[teamName] || '';
-  return '<button class="match-team-block" onclick="openTeamModal(\'' + teamName.replace(/'/g, "\\'") + '\')">' +
-    '<img src="' + logo + '" class="match-team-logo" onerror="this.style.display=\'none\'">' +
-    '<div class="match-team">' + teamName + '</div></button>';
-}
-
-function openTeamModal(teamName) {
-  var standings = originalStandings.find(function(t) { return t.t === teamName; });
-  var teamPlayers = allPlayers.filter(function(p) { return p.team === teamName; });
-  var teamMatches = allMatches.filter(function(m) { return m.home === teamName || m.away === teamName; })
-    .sort(function(a, b) { return new Date(b.date) - new Date(a.date); })
-    .slice(0, 8);
-
-  var logo = teamLogos[teamName] || '';
-  var html = '';
-
-  html += '<div class="modal-header">';
-  html += '<img src="' + logo + '" class="team-logo-big" onerror="this.style.display=\'none\'">';
-  html += '<h2>' + teamName + '</h2>';
-  html += '<div class="subtitle">نادي كرة قدم</div>';
-  html += '</div>';
-
-  html += '<div class="modal-body">';
-
-  if (standings) {
-    var gd = parseInt(standings.gf) - parseInt(standings.ga);
-    var gdStr = (gd > 0 ? '+' : '') + gd;
-    html += '<div class="modal-section">';
-    html += '<div class="modal-section-title">📊 إحصائيات الدوري</div>';
-    html += '<div class="stats-grid">';
-    html += '<div class="stat-card gold"><div class="stat-value">' + standings.r + '</div><div class="stat-label">الترتيب</div></div>';
-    html += '<div class="stat-card"><div class="stat-value">' + standings.pts + '</div><div class="stat-label">النقاط</div></div>';
-    html += '<div class="stat-card"><div class="stat-value">' + standings.p + '</div><div class="stat-label">مباريات</div></div>';
-    html += '<div class="stat-card"><div class="stat-value">' + standings.w + '</div><div class="stat-label">فاز</div></div>';
-    html += '<div class="stat-card"><div class="stat-value">' + standings.d + '</div><div class="stat-label">تعادل</div></div>';
-    html += '<div class="stat-card"><div class="stat-value">' + standings.l + '</div><div class="stat-label">خسر</div></div>';
-    html += '<div class="stat-card"><div class="stat-value">' + standings.gf + '</div><div class="stat-label">له</div></div>';
-    html += '<div class="stat-card"><div class="stat-value">' + standings.ga + '</div><div class="stat-label">عليه</div></div>';
-    html += '<div class="stat-card"><div class="stat-value">' + gdStr + '</div><div class="stat-label">الفرق</div></div>';
-    html += '</div></div>';
-  }
-
-  if (teamPlayers.length > 0) {
-    html += '<div class="modal-section">';
-    html += '<div class="modal-section-title">👥 اللاعبون (' + teamPlayers.length + ')</div>';
-    html += '<div class="players-mini-grid">';
-    teamPlayers.forEach(function(p) {
-      html += '<div class="player-mini">';
-      html += '<span class="num">' + (p.number || '—') + '</span>';
-      html += '<span class="name" title="' + translateName(p.name) + '">' + translateName(p.name) + '</span>';
-      html += '<span class="pos-tag">' + posArabic(p.position) + '</span>';
-      html += '</div>';
-    });
-    html += '</div></div>';
-  }
-
-  if (teamMatches.length > 0) {
-    html += '<div class="modal-section">';
-    html += '<div class="modal-section-title">⚽ المباريات</div>';
-    teamMatches.forEach(function(m) {
-      var state = getMatchState(m);
-      var dateShort = new Date(m.date).toLocaleDateString('ar-SA', { day: 'numeric', month: 'short' });
-      var scoreHtml;
-      if (state === 'finished') {
-        scoreHtml = '<div class="score">' + m.hs + ' - ' + m.as + '</div>';
-      } else if (state === 'live' || state === 'live-auto' || state === 'halftime') {
-        scoreHtml = '<div class="score live">' + m.hs + ' - ' + m.as + '</div>';
-      } else {
-        scoreHtml = '<div class="score upcoming">' + formatMatchTime(m.date) + '</div>';
-      }
-      html += '<div class="match-mini">';
-      html += '<div class="date">' + dateShort + '</div>';
-      html += '<div class="team">' + m.home + '</div>';
-      html += scoreHtml;
-      html += '<div class="team">' + m.away + '</div>';
-      html += '</div>';
-    });
-    html += '</div>';
-  }
-
-  html += '</div>';
-
-  document.getElementById('modalInnerContent').innerHTML = html;
-  document.getElementById('teamModal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal(event) {
-  if (event && event.target && event.target.id !== 'teamModal') return;
-  document.getElementById('teamModal').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-function showTab(id, btn) {
-  document.querySelectorAll('.content').forEach(function(el) { el.classList.add('hidden'); });
-  document.querySelectorAll('.tab').forEach(function(el) { el.classList.remove('active', 'active-live'); });
-  document.getElementById(id).classList.remove('hidden');
-  if (id === 'live') btn.classList.add('active-live'); else btn.classList.add('active');
-}
-
-function formatMatchDate(iso) {
-  var d = new Date(iso);
-  var days = ['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
-  var months = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
-  return days[d.getDay()] + '، ' + d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
-}
-function formatMatchTime(iso) {
-  var d = new Date(iso);
-  var h = d.getHours(), m = d.getMinutes();
-  var ampm = h >= 12 ? 'مساءً' : 'صباحاً';
-  h = h % 12; if (h === 0) h = 12;
-  var mm = m < 10 ? '0' + m : m;
-  return h + ':' + mm + ' ' + ampm;
-}
-function posName(a) {
-  if (a === 'GK' || a === 'G') return 'GK';
-  if (['DF','D','CB','LB','RB'].indexOf(a) !== -1) return 'DF';
-  if (['MF','M','CM','DM','AM'].indexOf(a) !== -1) return 'MF';
-  if (['FW','F','ST','CF','LW','RW'].indexOf(a) !== -1) return 'FW';
-  return a;
-}
-function posArabic(a) {
-  var p = posName(a);
-  return p === 'GK' ? 'حارس' : p === 'DF' ? 'مدافع' : p === 'MF' ? 'وسط' : p === 'FW' ? 'مهاجم' : (a || '—');
-}
-
-var allMatches = [];
-var allPlayers = [];
-var originalStandings = [];
-var currentFilter = 'today';
-var previousRanks = {};
-var secondsSinceRefresh = 0;
-var REFRESH_INTERVAL = 60;
-
-function getMatchState(m) {
-  var status = (m.status || '').toLowerCase();
-  var state = (m.state || '').toLowerCase();
-  var diffMin = (Date.now() - new Date(m.date).getTime()) / 60000;
-  if (m.completed || state === 'post' || status === 'ft' || status.indexOf('final') !== -1) return 'finished';
-  if (status === 'ht' || status.indexOf('half') !== -1) return 'halftime';
-  if (state === 'in' || status.indexOf('progress') !== -1 || /^\d+'/.test(status)) return 'live';
-  if (diffMin < 0) return 'upcoming';
-  if (diffMin < 105) return 'live-auto';
-  return 'finished';
-}
-
-function getKSADateKey(dInput) {
-  var d = new Date(dInput);
-  if (isNaN(d.getTime())) return '';
-  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
-}
-
-function getDateCategory(dateIso) {
-  var matchKey = getKSADateKey(dateIso);
-  var now = new Date();
-  var todayKey = getKSADateKey(now);
-  var y = new Date(now); y.setDate(now.getDate() - 1);
-  var t = new Date(now); t.setDate(now.getDate() + 1);
-  if (matchKey === todayKey) return 'today';
-  if (matchKey === getKSADateKey(t)) return 'tomorrow';
-  if (matchKey === getKSADateKey(y)) return 'yesterday';
-  return 'other';
-}
-
-function isLiveState(state) {
-  return state === 'live' || state === 'live-auto' || state === 'halftime';
-}
-
-function getFilteredMatches(filter) {
-  return allMatches.filter(function(m) {
-    var state = getMatchState(m);
-    var cat = getDateCategory(m.date);
-    if (filter === 'all') return true;
-    if (filter === 'live') return isLiveState(state);
-    if (filter === 'today') return cat === 'today';
-    if (filter === 'tomorrow') return cat === 'tomorrow';
-    if (filter === 'yesterday') return cat === 'yesterday';
-    return true;
-  }).sort(function(a, b) { return new Date(a.date) - new Date(b.date); });
-}
-
-function computeLiveStandings() {
-  var table = originalStandings.map(function(t) {
-    return { t: t.t, p: parseInt(t.p)||0, w: parseInt(t.w)||0, d: parseInt(t.d)||0,
-             l: parseInt(t.l)||0, gf: parseInt(t.gf)||0, ga: parseInt(t.ga)||0,
-             pts: parseInt(t.pts)||0, live: false };
-  });
-  var liveMatches = [];
-  allMatches.forEach(function(m) {
-    if (isLiveState(getMatchState(m))) {
-      liveMatches.push(m);
-      var hs = parseInt(m.hs) || 0, as = parseInt(m.as) || 0;
-      var home = table.find(function(t) { return t.t === m.home; });
-      var away = table.find(function(t) { return t.t === m.away; });
-      if (home && away) {
-        home.live = true; away.live = true;
-        home.p++; away.p++;
-        home.gf += hs; home.ga += as;
-        away.gf += as; away.ga += hs;
-        if (hs > as) { home.w++; home.pts += 3; away.l++; }
-        else if (as > hs) { away.w++; away.pts += 3; home.l++; }
-        else { home.d++; home.pts++; away.d++; away.pts++; }
-      }
-    }
-  });
-  table.sort(function(a, b) {
-    if (b.pts !== a.pts) return b.pts - a.pts;
-    var gdA = a.gf - a.ga, gdB = b.gf - b.ga;
-    if (gdB !== gdA) return gdB - gdA;
-    return b.gf - a.gf;
-  });
-  table.forEach(function(t, i) { t.r = i + 1; });
-  return { table: table, liveMatches: liveMatches };
-}
-
-function renderLiveStandings() {
-  var result = computeLiveStandings();
-  var table = result.table;
-  var liveMatches = result.liveMatches;
-  var info = document.getElementById('liveMatchesInfo');
-  if (liveMatches.length === 0) {
-    info.innerHTML = 'لا توجد مباريات جارية حالياً.';
-  } else {
-    var mhtml = '<b>' + liveMatches.length + ' مباراة جارية الآن:</b><br>';
-    liveMatches.forEach(function(m) {
-      mhtml += '⚽ ' + m.home + ' <b>' + m.hs + ' - ' + m.as + '</b> ' + m.away + '<br>';
-    });
-    info.innerHTML = mhtml;
-  }
-  var html = '';
-  table.forEach(function(t) {
-    var prev = previousRanks[t.t];
-    var changeHtml = '';
-    if (prev !== undefined && prev !== t.r) {
-      if (prev > t.r) changeHtml = '<span class="change-up"> ▲</span>';
-      else changeHtml = '<span class="change-down"> ▼</span>';
-    }
-    var rowClass = t.live ? 'live-team' : '';
-    var rankClass = 'rank-badge';
-    if (t.r === 1) rankClass += ' gold';
-    else if (t.r === 2) rankClass += ' silver';
-    else if (t.r === 3) rankClass += ' bronze';
-    var gd = t.gf - t.ga;
-    var gdStr = (gd > 0 ? '+' : '') + gd;
-    html += '<tr class="' + rowClass + '">';
-    html += '<td><span class="' + rankClass + '">' + t.r + '</span>' + changeHtml + '</td>';
-    html += '<td class="team">' + teamLinkHTML(t.t, true) + (t.live ? ' ⚽' : '') + '</td>';
-    html += '<td>' + t.p + '</td><td>' + t.w + '</td><td>' + t.d + '</td><td>' + t.l + '</td>';
-    html += '<td>' + t.gf + '</td><td>' + t.ga + '</td><td>' + gdStr + '</td><td><b>' + t.pts + '</b></td></tr>';
-  });
-  document.getElementById('liveBody').innerHTML = html;
-  previousRanks = {};
-  table.forEach(function(t) { previousRanks[t.t] = t.r; });
-}
-
-function buildFilters() {
-  var counts = { all: allMatches.length, live: 0, today: 0, tomorrow: 0, yesterday: 0 };
-  allMatches.forEach(function(m) {
-    var state = getMatchState(m);
-    var cat = getDateCategory(m.date);
-    if (isLiveState(state)) counts.live++;
-    if (cat === 'today') counts.today++;
-    if (cat === 'tomorrow') counts.tomorrow++;
-    if (cat === 'yesterday') counts.yesterday++;
-  });
-
-  var filters = [
-    { id: 'all', label: '📋 الكل', count: counts.all },
-    { id: 'tomorrow', label: '➡️ غداً', count: counts.tomorrow },
-    { id: 'today', label: '📅 اليوم', count: counts.today },
-    { id: 'yesterday', label: '⬅️ أمس', count: counts.yesterday }
-  ];
-  if (counts.live > 0) filters.unshift({ id: 'live', label: '🔴 مباشر', count: counts.live });
-
-  var html = '';
-  filters.forEach(function(f) {
-    html += '<button class="filter-btn ' + (currentFilter === f.id ? 'active' : '') + '" onclick="setFilter(\'' + f.id + '\')">' + f.label + ' <span class="count">' + f.count + '</span></button>';
-  });
-  document.getElementById('matchFilters').innerHTML = html;
-}
-
-function setFilter(f) { currentFilter = f; buildFilters(); renderMatches(); }
-
-function renderMatches() {
-  var filtered = getFilteredMatches(currentFilter);
-  var rd = document.getElementById('resultsData');
-  if (filtered.length === 0) {
-    rd.innerHTML = '<div class="empty">لا توجد مباريات في هذه الفئة.</div>';
-    return;
-  }
-  var rhtml = '';
-  filtered.forEach(function(m) {
-    var state = getMatchState(m);
-    var headerStatus, statusClass, centerHtml, cardClass = 'match-card';
-    if (state === 'finished') {
-      statusClass = 'match-status finished'; headerStatus = '✅ انتهت';
-      centerHtml = '<div class="match-score">' + m.hs + ' - ' + m.as + '</div>';
-    } else if (state === 'halftime') {
-      statusClass = 'match-status live'; headerStatus = '⏸️ بين الشوطين';
-      centerHtml = '<div class="match-score live-score">' + m.hs + ' - ' + m.as + '</div>';
-      cardClass += ' live';
-    } else if (isLiveState(state)) {
-      statusClass = 'match-status live'; headerStatus = '🔴 مباشر';
-      centerHtml = '<div class="match-score live-score">' + m.hs + ' - ' + m.as + '</div>';
-      cardClass += ' live';
-    } else {
-      statusClass = 'match-status'; headerStatus = '⏱️ ' + formatMatchTime(m.date);
-      centerHtml = '<div style="font-size:12px; color:#1a5490; font-weight:bold;">' + formatMatchDate(m.date) + '</div>';
-    }
-    rhtml += '<div class="' + cardClass + '">';
-    rhtml += '<div class="match-header"><div>' + formatMatchDate(m.date) + '</div><div class="' + statusClass + '">' + headerStatus + '</div></div>';
-    rhtml += '<div class="match-body">';
-    rhtml += teamMatchLinkHTML(m.home);
-    rhtml += '<div class="match-center">' + centerHtml + '</div>';
-    rhtml += teamMatchLinkHTML(m.away);
-    rhtml += '</div></div>';
-  });
-  rd.innerHTML = rhtml;
-}
-
-function filterPlayers() {
-  var search = document.getElementById('playerSearch').value.toLowerCase().trim();
-  var team = document.getElementById('teamFilter').value;
-  var pos = document.getElementById('posFilter').value;
-  var filtered = allPlayers.filter(function(p) {
-    var nameAr = translateName(p.name).toLowerCase();
-    var nameEn = p.name.toLowerCase();
-    if (search && nameEn.indexOf(search) === -1 && nameAr.indexOf(search) === -1) return false;
-    if (team && p.team !== team) return false;
-    if (pos && posName(p.position) !== pos) return false;
-    return true;
-  });
-  renderPlayers(filtered);
-}
-
-function renderPlayers(players) {
-  var tb = document.getElementById('playersBody');
-  if (players.length === 0) {
-    tb.innerHTML = '<tr><td colspan="6" class="empty">لا يوجد لاعبون مطابقون.</td></tr>';
-    document.getElementById('playerCount').textContent = '';
-    return;
-  }
-  var html = '';
-  players.forEach(function(p) {
-    html += '<tr>';
-    html += '<td><span class="number-badge">' + (p.number || '—') + '</span></td>';
-    html += '<td class="team player-name-cell">' + translateName(p.name) + '</td>';
-    html += '<td>' + p.team + '</td>';
-    html += '<td><span class="pos-badge ' + posName(p.position) + '">' + posArabic(p.position) + '</span></td>';
-    html += '<td>' + (p.age || '—') + '</td>';
-    html += '<td>' + translateCountry(p.nationality) + '</td></tr>';
-  });
-  tb.innerHTML = html;
-  document.getElementById('playerCount').textContent = 'عدد اللاعبين: ' + players.length + ' من ' + allPlayers.length;
-}
-
-function changeLeague(leagueId) {
-  loadDataForLeague(leagueId, true);
-}
-
-function loadDataForLeague(leagueId, showLoader) {
-  var fileName = leagueId === 'roshen' ? 'data.json' : 'data_' + leagueId + '.json';
-  if (showLoader) {
-    document.getElementById('standingsBody').innerHTML = '<tr><td colspan="10" class="loading">جاري تحميل بيانات الدوري...</td></tr>';
-  }
-  fetch(fileName + '?v=' + Date.now())
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
-      processLoadedData(data);
-    })
-    .catch(function(e) {
-      // في حال لم يتوفر ملف الدوري الفرعي بعد، يعرض بيانات دوري روشن كنموذج تجريبي
-      if (leagueId !== 'roshen') {
-        fetch('data.json?v=' + Date.now())
-          .then(function(r) { return r.json(); })
-          .then(function(data) { processLoadedData(data); });
-      } else {
-        document.getElementById('standingsBody').innerHTML = '<tr><td colspan="10" class="loading">تعذر تحميل بيانات الدوري</td></tr>';
-      }
-    });
-}
-
-function processLoadedData(data) {
-  var html = '';
-  (data.standings || []).forEach(function(t) {
-    var gd = parseInt(t.gf) - parseInt(t.ga);
-    html += '<tr>';
-    html += '<td>' + t.r + '</td>';
-    html += '<td class="team">' + teamLinkHTML(t.t, true) + '</td>';
-    html += '<td>' + t.p + '</td><td>' + t.w + '</td><td>' + t.d + '</td><td>' + t.l + '</td>';
-    html += '<td>' + t.gf + '</td><td>' + t.ga + '</td><td>' + (gd > 0 ? '+' + gd : gd) + '</td><td><b>' + t.pts + '</b></td></tr>';
-  });
-  document.getElementById('standingsBody').innerHTML = html;
-  document.getElementById('updatedStandings').textContent = 'آخر تحديث: ' + (data.lastUpdated || 'الآن');
-  originalStandings = data.standings || [];
-
-  allPlayers = (data.players || []).slice().sort(function(a, b) {
-    if (a.team !== b.team) return a.team.localeCompare(b.team, 'ar');
-    return parseInt(a.number || 999) - parseInt(b.number || 999);
-  });
-  
-  var teams = {};
-  allPlayers.forEach(function(p) { if (p.team) teams[p.team] = true; });
-  var teamSelect = document.getElementById('teamFilter');
-  teamSelect.innerHTML = '<option value="">كل الفرق</option>';
-  Object.keys(teams).sort(function(a,b){return a.localeCompare(b,'ar');}).forEach(function(t) {
-    var opt = document.createElement('option');
-    opt.value = t; opt.textContent = t;
-    teamSelect.appendChild(opt);
-  });
-  renderPlayers(allPlayers);
-
-  if (data.scorers && data.scorers.length) {
-    var scorersHtml = '';
-    data.scorers.forEach(function(s, i) {
-      scorersHtml += '<tr><td>' + (i + 1) + '</td><td class="player-name-cell">' + translateName(s.name) + '</td><td>' + s.team + '</td><td><b>' + s.goals + '</b></td></tr>';
-    });
-    document.getElementById('scorersBody').innerHTML = scorersHtml;
-  }
-
-  if (data.assists && data.assists.length) {
-    var assistsHtml = '';
-    data.assists.forEach(function(a, i) {
-      assistsHtml += '<tr><td>' + (i + 1) + '</td><td class="player-name-cell">' + translateName(a.name) + '</td><td>' + a.team + '</td><td><b>' + a.assists + '</b></td></tr>';
-    });
-    document.getElementById('assistsBody').innerHTML = assistsHtml;
-  }
-
-  allMatches = data.results || [];
-  buildFilters();
-  renderMatches();
-  renderLiveStandings();
-
-  var hasLive = getFilteredMatches('live').length > 0;
-  var liveTab = document.getElementById('tabLive');
-  liveTab.style.display = hasLive ? 'block' : 'none';
-}
-
-loadDataForLeague('roshen', true);
-setInterval(function() {
-  var leagueId
