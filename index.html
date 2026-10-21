@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قائمة اللاعبين المترجمة</title>
+    <title>مترجم أسماء اللاعبين وإحصائيات الدوري</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f9; }
         #results { margin-top: 20px; }
@@ -19,9 +19,9 @@
     <script src="names.js"></script>
 
     <script>
-        // دالة الترجمة باستخدام القاموس الخارجي
+        // دالة الترجمة للبحث داخل القاموس الخارجي
         window.translatePlayer = function(name) {
-          if (!name) return 'غير معروف';
+          if (!name) return '';
           if (window.playerNames && window.playerNames[name]) return window.playerNames[name];
           var lower = name.toLowerCase();
           for (var k in window.playerNames) {
@@ -42,8 +42,8 @@
                     if(data && data.players && data.players.length > 0) {
                         data.players.forEach(player => {
                             // استخدام المفاتيح الصحيحة التي يولدها البايثون (name و team)
-                            const englishName = player.name || 'غير متوفر';
-                            const club = player.team || 'غير متوفر';
+                            const englishName = player.name || player.englishName || 'غير متوفر';
+                            const club = player.team || player.club || 'غير متوفر';
                             const arabicName = window.translatePlayer(englishName);
                             
                             const playerHtml = `
