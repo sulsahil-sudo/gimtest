@@ -34,7 +34,8 @@
         .player-img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #1b4d3e; box-shadow: 0 2px 5px rgba(0,0,0,0.15); flex-shrink: 0; }
         .player-info { display: flex; align-items: center; gap: 15px; }
 
-        .score-box { font-size: 18px; font-weight: bold; color: #1b4d3e; background: #e8f5e9; padding: 5px 15px; border-radius: 20px; }
+        .score-box { font-size: 16px; font-weight: bold; color: #1b4d3e; background: #e8f5e9; padding: 6px 14px; border-radius: 20px; }
+        .time-badge { font-size: 12px; color: #d35400; background: #fef5e7; padding: 5px 12px; border-radius: 15px; font-weight: bold; border: 1px solid #f8c471; }
     </style>
 </head>
 <body>
@@ -143,12 +144,13 @@
 
     const todayData = [
         { home: "القادسية", away: "الهلال", score: "1 - 1" },
-        { home: "النصر", away: "الاتحاد", score: "VS" }
+        { home: "النصر", away: "الاتحاد", score: "قيد المتابعة..." }
     ];
 
+    // أضفنا مواعيد محددة لمباريات بكرة لتعرض بشكل مرتب
     const tomorrowData = [
-        { home: "نيوم", away: "الدرعية", score: "VS" },
-        { home: "الاتفاق", away: "الخلود", score: "VS" }
+        { home: "نيوم", away: "الدرعية", time: "09:00 م" },
+        { home: "الاتفاق", away: "الخلود", time: "06:35 م" }
     ];
 
     const standingsData = [
@@ -172,7 +174,6 @@
         { rank: 18, team: "أبها", played: 8, win: 0, draw: 2, lose: 6, points: 2 }
     ];
 
-    // روابط صور اللاعبين الرسمية المباشرة والموثوقة
     const scorersData = [
         { rank: 1, player: "إيفان توني", team: "الأهلي", goals: 11, img: "https://a.espncdn.com/i/headshots/soccer/players/full/158580.png" },
         { rank: 2, player: "ماتيوس ريتيغوي", team: "القادسية", goals: 6, img: "https://a.espncdn.com/i/headshots/soccer/players/full/304381.png" },
@@ -181,13 +182,19 @@
         { rank: 5, player: "كريستيانو رونالدو", team: "النصر", goals: 4, img: "https://a.espncdn.com/i/headshots/soccer/players/full/3829.png" }
     ];
 
-    function renderMatches(data, elementId) {
+    function renderMatches(data, elementId, isTomorrow = false) {
         const container = document.getElementById(elementId);
         container.innerHTML = '';
         data.forEach(m => {
             const homeBadge = getTeamBadge(m.home);
             const awayBadge = getTeamBadge(m.away);
-            let scoreHTML = m.score === "VS" ? `<span class="score-box" style="background:#ecf0f1; color:#555;">VS</span>` : `<span class="score-box">${m.score}</span>`;
+            
+            let centerHTML = '';
+            if (isTomorrow) {
+                centerHTML = `<span class="time-badge">⏰ ${m.time}</span>`;
+            } else {
+                centerHTML = `<span class="score-box">${m.score}</span>`;
+            }
 
             container.innerHTML += `
                 <div class="match-card">
@@ -196,7 +203,7 @@
                         <span class="team-name">${m.home}</span>
                     </div>
                     <div style="text-align: center;">
-                        ${scoreHTML}
+                        ${centerHTML}
                     </div>
                     <div class="team-box">
                         <span class="team-name">${m.away}</span>
@@ -208,7 +215,7 @@
 
     renderMatches(yesterdayData, 'yesterdayList');
     renderMatches(todayData, 'todayList');
-    renderMatches(tomorrowData, 'tomorrowList');
+    renderMatches(tomorrowData, 'tomorrowList', true); // تمرير علامة مباريات بكرة لإظهار المواعيد
 
     const standingsTableBody = document.getElementById('standingsTableBody');
     standingsData.forEach(s => {
