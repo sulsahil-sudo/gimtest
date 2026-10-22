@@ -2,38 +2,26 @@
   {
     "home": "الحزم",
     "away": "الفيحاء",
-    "hs": "0",
-    "as": "0",
+    "hs": "1",
+    "as": "2",
     "date": "2026-10-22T13:40Z",
-    "status": "Thu, October 22nd at 9:40 AM EDT",
-    "state": "pre",
+    "status": "80'",
+    "state": "in",
     "completed": false,
-    "clock": "0'",
-    "period": 0
+    "clock": "80'",
+    "period": 2
   },
   {
     "home": "الفتح",
     "away": "الشباب",
     "hs": "0",
-    "as": "0",
+    "as": "2",
     "date": "2026-10-22T14:45Z",
-    "status": "Thu, October 22nd at 10:45 AM EDT",
-    "state": "pre",
+    "status": "37'",
+    "state": "in",
     "completed": false,
-    "clock": "0'",
-    "period": 0
-  },
-  {
-    "home": "الأهلي",
-    "away": "الخليج",
-    "hs": "0",
-    "as": "0",
-    "date": "2026-10-22T18:00Z",
-    "status": "Thu, October 22nd at 2:00 PM EDT",
-    "state": "pre",
-    "completed": false,
-    "clock": "0'",
-    "period": 0
+    "clock": "37'",
+    "period": 1
   },
   {
     "home": "الخلود",
@@ -318,6 +306,18 @@
     "as": "0",
     "date": "2026-10-23T15:30Z",
     "status": "Fri, October 23rd at 11:30 AM EDT",
+    "state": "pre",
+    "completed": false,
+    "clock": "0'",
+    "period": 0
+  },
+  {
+    "home": "الأهلي",
+    "away": "الخليج",
+    "hs": "0",
+    "as": "0",
+    "date": "2026-10-23T18:00Z",
+    "status": "Fri, October 23rd at 2:00 PM EDT",
     "state": "pre",
     "completed": false,
     "clock": "0'",

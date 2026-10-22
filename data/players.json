@@ -4100,11 +4100,11 @@
     "nationality": "Saudi Arabia"
   },
   {
-    "player_id": "793-lazar-stojanović",
+    "player_id": "793-lazar-stojanovic",
     "team_id": "793",
     "team": "الشباب",
-    "name": "Lazar Stojanović",
-    "position": "F",
+    "name": "Lazar Stojanovic",
+    "position": "D",
     "number": "15",
     "age": "21",
     "nationality": "Serbia"
@@ -4198,6 +4198,16 @@
     "number": "",
     "age": "21",
     "nationality": "Saudi Arabia"
+  },
+  {
+    "player_id": "793-adel-abbas-qasem",
+    "team_id": "793",
+    "team": "الشباب",
+    "name": "Adel Abbas Qasem",
+    "position": "M",
+    "number": "35",
+    "age": "",
+    "nationality": ""
   },
   {
     "player_id": "793-muqrin-abanumay",
