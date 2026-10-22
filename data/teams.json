@@ -50,6 +50,11 @@
     "name_ar": "الخليج"
   },
   {
+    "team_id": "793",
+    "league_id": "saudi-pro-league",
+    "name_ar": "الشباب"
+  },
+  {
     "team_id": "21964",
     "league_id": "saudi-pro-league",
     "name_ar": "الحزم"
@@ -58,11 +63,6 @@
     "team_id": "21965",
     "league_id": "saudi-pro-league",
     "name_ar": "الرياض"
-  },
-  {
-    "team_id": "793",
-    "league_id": "saudi-pro-league",
-    "name_ar": "الشباب"
   },
   {
     "team_id": "21827",

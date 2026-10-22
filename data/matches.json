@@ -2,26 +2,26 @@
   {
     "home": "الحزم",
     "away": "الفيحاء",
-    "hs": "1",
+    "hs": "2",
     "as": "2",
     "date": "2026-10-22T13:40Z",
-    "status": "80'",
-    "state": "in",
-    "completed": false,
-    "clock": "80'",
+    "status": "FT",
+    "state": "post",
+    "completed": true,
+    "clock": "90'+6'",
     "period": 2
   },
   {
     "home": "الفتح",
     "away": "الشباب",
-    "hs": "0",
-    "as": "2",
+    "hs": "1",
+    "as": "3",
     "date": "2026-10-22T14:45Z",
-    "status": "37'",
-    "state": "in",
-    "completed": false,
-    "clock": "37'",
-    "period": 1
+    "status": "FT",
+    "state": "post",
+    "completed": true,
+    "clock": "90'+5'",
+    "period": 2
   },
   {
     "home": "الخلود",
