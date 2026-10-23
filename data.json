@@ -2,15 +2,15 @@
   "standings": [
     {
       "r": 1,
-      "t": "القادسية",
+      "t": "الهلال",
       "p": "10",
-      "w": "8",
-      "d": "1",
+      "w": "9",
+      "d": "0",
       "l": "1",
-      "gf": "24",
+      "gf": "30",
       "ga": "9",
-      "gd": "+15",
-      "pts": "25"
+      "gd": "+21",
+      "pts": "27"
     },
     {
       "r": 2,
@@ -26,15 +26,15 @@
     },
     {
       "r": 3,
-      "t": "الهلال",
-      "p": "9",
+      "t": "القادسية",
+      "p": "11",
       "w": "8",
-      "d": "0",
-      "l": "1",
-      "gf": "27",
-      "ga": "7",
-      "gd": "+20",
-      "pts": "24"
+      "d": "1",
+      "l": "2",
+      "gf": "26",
+      "ga": "12",
+      "gd": "+14",
+      "pts": "25"
     },
     {
       "r": 4,
@@ -51,14 +51,14 @@
     {
       "r": 5,
       "t": "الأهلي",
-      "p": "9",
-      "w": "6",
+      "p": "10",
+      "w": "7",
       "d": "0",
       "l": "3",
-      "gf": "23",
-      "ga": "12",
-      "gd": "+11",
-      "pts": "18"
+      "gf": "27",
+      "ga": "13",
+      "gd": "+14",
+      "pts": "21"
     },
     {
       "r": 6,
@@ -111,13 +111,13 @@
     {
       "r": 10,
       "t": "الخليج",
-      "p": "10",
+      "p": "11",
       "w": "2",
       "d": "6",
-      "l": "2",
-      "gf": "9",
-      "ga": "13",
-      "gd": "-4",
+      "l": "3",
+      "gf": "10",
+      "ga": "17",
+      "gd": "-7",
       "pts": "12"
     },
     {
@@ -245,25 +245,25 @@
     {
       "home": "الأهلي",
       "away": "الخليج",
-      "hs": "1",
-      "as": "0",
+      "hs": "4",
+      "as": "1",
       "date": "2026-10-23T18:00Z",
-      "status": "55'",
-      "state": "in",
-      "completed": false,
-      "clock": "55'",
+      "status": "FT",
+      "state": "post",
+      "completed": true,
+      "clock": "90'+7'",
       "period": 2
     },
     {
       "home": "القادسية",
       "away": "الهلال",
-      "hs": "1",
-      "as": "1",
+      "hs": "2",
+      "as": "3",
       "date": "2026-10-23T18:00Z",
-      "status": "60'",
-      "state": "in",
-      "completed": false,
-      "clock": "60'",
+      "status": "FT",
+      "state": "post",
+      "completed": true,
+      "clock": "90'+6'",
       "period": 2
     },
     {
@@ -821,676 +821,6 @@
   ],
   "players": [
     {
-      "player_id": "22022-koen-casteels",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Koen Casteels",
-      "position": "G",
-      "number": "1",
-      "age": "34",
-      "nationality": "Belgium"
-    },
-    {
-      "player_id": "22022-ahmed-al-kassar",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Ahmed Al-Kassar",
-      "position": "G",
-      "number": "28",
-      "age": "35",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-meshari-sunyur",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Meshari Sunyur",
-      "position": "G",
-      "number": "50",
-      "age": "24",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-wafi-al-aklabi",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Wafi Al Aklabi",
-      "position": "G",
-      "number": "60",
-      "age": "18",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-abgullah-almuhaysin",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Abgullah Almuhaysin",
-      "position": "G",
-      "number": "31",
-      "age": "19",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-nacho",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Nacho",
-      "position": "D",
-      "number": "6",
-      "age": "36",
-      "nationality": "Spain"
-    },
-    {
-      "player_id": "22022-yasser-al-shahrani",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Yasser Al-Shahrani",
-      "position": "D",
-      "number": "12",
-      "age": "34",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-gastón-álvarez",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Gastón Álvarez",
-      "position": "D",
-      "number": "17",
-      "age": "26",
-      "nationality": "Uruguay"
-    },
-    {
-      "player_id": "22022-mohammed-qasem",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Mohammed Qasem",
-      "position": "D",
-      "number": "24",
-      "age": "31",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-waleed-al-ahmed",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Waleed Al-Ahmed",
-      "position": "D",
-      "number": "23",
-      "age": "27",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-jehad-thakri",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Jehad Thakri",
-      "position": "D",
-      "number": "4",
-      "age": "25",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-ali-diabaté",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Ali Diabaté",
-      "position": "D",
-      "number": "26",
-      "age": "19",
-      "nationality": ""
-    },
-    {
-      "player_id": "22022-abdulah-al-jwayzan",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Abdulah Al Jwayzan",
-      "position": "D",
-      "number": "13",
-      "age": "19",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-abdulaziz-tariq-al-qarawi",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Abdulaziz Tariq Al Qarawi",
-      "position": "D",
-      "number": "42",
-      "age": "",
-      "nationality": ""
-    },
-    {
-      "player_id": "22022-julian-weigl",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Julian Weigl",
-      "position": "M",
-      "number": "5",
-      "age": "31",
-      "nationality": "Germany"
-    },
-    {
-      "player_id": "22022-nahitan-nández",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Nahitan Nández",
-      "position": "M",
-      "number": "8",
-      "age": "30",
-      "nationality": "Uruguay"
-    },
-    {
-      "player_id": "22022-tijjani-reijnders",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Tijjani Reijnders",
-      "position": "M",
-      "number": "14",
-      "age": "28",
-      "nationality": "Netherlands"
-    },
-    {
-      "player_id": "22022-turki-al-ammar",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Turki Al-Ammar",
-      "position": "M",
-      "number": "7",
-      "age": "27",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-ali-abdullah-hazzazi",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Ali Abdullah Hazzazi",
-      "position": "M",
-      "number": "11",
-      "age": "32",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-musab-al-juwayr",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Musab Al-Juwayr",
-      "position": "M",
-      "number": "10",
-      "age": "23",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-abdulmalik-al-jaber",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Abdulmalik Al Jaber",
-      "position": "M",
-      "number": "18",
-      "age": "22",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-mohammed-abu-al-shamat",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Mohammed Abu Al-Shamat",
-      "position": "M",
-      "number": "2",
-      "age": "24",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-eyad-houssa",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Eyad Houssa",
-      "position": "M",
-      "number": "27",
-      "age": "19",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-ahmed-al-siyahi",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Ahmed Al Siyahi",
-      "position": "M",
-      "number": "35",
-      "age": "21",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-julián-quiñones",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Julián Quiñones",
-      "position": "F",
-      "number": "33",
-      "age": "29",
-      "nationality": "Mexico"
-    },
-    {
-      "player_id": "22022-mateo-retegui",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Mateo Retegui",
-      "position": "F",
-      "number": "32",
-      "age": "27",
-      "nationality": "Italy"
-    },
-    {
-      "player_id": "22022-abdullah-al-salem",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Abdullah Al-Salem",
-      "position": "F",
-      "number": "9",
-      "age": "33",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-haitham-asiri",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Haitham Asiri",
-      "position": "F",
-      "number": "19",
-      "age": "25",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-mohammed-al-qahtani",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Mohammed Al-Qahtani",
-      "position": "F",
-      "number": "15",
-      "age": "24",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-abdulaziz-al-aliwa",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Abdulaziz Al-Aliwa",
-      "position": "F",
-      "number": "46",
-      "age": "22",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "22022-christopher-bonsu-baah",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Christopher Bonsu Baah",
-      "position": "F",
-      "number": "22",
-      "age": "21",
-      "nationality": "Ghana"
-    },
-    {
-      "player_id": "22022-sani-suleiman",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Sani Suleiman",
-      "position": "F",
-      "number": "70",
-      "age": "20",
-      "nationality": "Nigeria"
-    },
-    {
-      "player_id": "22022-mahamadou-sangaré",
-      "team_id": "22022",
-      "team": "القادسية",
-      "name": "Mahamadou Sangaré",
-      "position": "F",
-      "number": "30",
-      "age": "19",
-      "nationality": "France"
-    },
-    {
-      "player_id": "817-bento",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Bento",
-      "position": "G",
-      "number": "24",
-      "age": "27",
-      "nationality": "Brazil"
-    },
-    {
-      "player_id": "817-nawaf-al-aqidi",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Nawaf Al-Aqidi",
-      "position": "G",
-      "number": "1",
-      "age": "26",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-mubarak-al-buainain",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Mubarak Al Buainain",
-      "position": "G",
-      "number": "61",
-      "age": "21",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-abdulrahman-al-otaibi",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Abdulrahman Al Otaibi",
-      "position": "G",
-      "number": "53",
-      "age": "18",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-abdulhadi-al-alwan",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Abdulhadi Al-Alwan",
-      "position": "G",
-      "number": "22",
-      "age": "",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-sultan-abdullah-saad-al-mas",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Sultan Abdullah Saad Al Mas",
-      "position": "G",
-      "number": "66",
-      "age": "",
-      "nationality": ""
-    },
-    {
-      "player_id": "817-iñigo-martínez",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Iñigo Martínez",
-      "position": "D",
-      "number": "26",
-      "age": "35",
-      "nationality": "Spain"
-    },
-    {
-      "player_id": "817-abdulelah-al-amri",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Abdulelah Al-Amri",
-      "position": "D",
-      "number": "5",
-      "age": "29",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-sultan-al-ghannam",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Sultan Al-Ghannam",
-      "position": "D",
-      "number": "2",
-      "age": "32",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-mohamed-simakan",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Mohamed Simakan",
-      "position": "D",
-      "number": "3",
-      "age": "26",
-      "nationality": "France"
-    },
-    {
-      "player_id": "817-saad-al-nasser",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Saad Al Nasser",
-      "position": "D",
-      "number": "6",
-      "age": "25",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-nawaf-boushal",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Nawaf Boushal",
-      "position": "D",
-      "number": "12",
-      "age": "27",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-nader-al-sharari",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Nader Al Sharari",
-      "position": "D",
-      "number": "4",
-      "age": "30",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-salem-al-najdi",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Salem Al Najdi",
-      "position": "D",
-      "number": "83",
-      "age": "23",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-aser-abdulftah-hwsawi",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Aser Abdulftah Hwsawi",
-      "position": "D",
-      "number": "",
-      "age": "24",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-majed-qasheesh",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Majed Qasheesh",
-      "position": "D",
-      "number": "50",
-      "age": "24",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-awad-aman",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Awad Aman",
-      "position": "D",
-      "number": "70",
-      "age": "21",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-yassine-gays-munsif-sallem",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Yassine Gays Munsif Sallem",
-      "position": "D",
-      "number": "46",
-      "age": "",
-      "nationality": ""
-    },
-    {
-      "player_id": "817-samú-costa",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Samú Costa",
-      "position": "M",
-      "number": "11",
-      "age": "25",
-      "nationality": "Portugal"
-    },
-    {
-      "player_id": "817-sami-al-najei",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Sami Al-Najei",
-      "position": "M",
-      "number": "14",
-      "age": "29",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-abdullah-al-khaibari",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Abdullah Al-Khaibari",
-      "position": "M",
-      "number": "17",
-      "age": "30",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-aiman-yahya",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Aiman Yahya",
-      "position": "M",
-      "number": "23",
-      "age": "25",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-hayder-abdulkareem",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Hayder Abdulkareem",
-      "position": "M",
-      "number": "8",
-      "age": "22",
-      "nationality": "Iraq"
-    },
-    {
-      "player_id": "817-cristiano-ronaldo",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Cristiano Ronaldo",
-      "position": "F",
-      "number": "7",
-      "age": "41",
-      "nationality": "Portugal"
-    },
-    {
-      "player_id": "817-sadio-mané",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Sadio Mané",
-      "position": "F",
-      "number": "10",
-      "age": "34",
-      "nationality": "Senegal"
-    },
-    {
-      "player_id": "817-kingsley-coman",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Kingsley Coman",
-      "position": "F",
-      "number": "21",
-      "age": "30",
-      "nationality": "France"
-    },
-    {
-      "player_id": "817-abdulrahman-ghareeb",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Abdulrahman Ghareeb",
-      "position": "F",
-      "number": "29",
-      "age": "29",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-joão-félix",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "João Félix",
-      "position": "F",
-      "number": "79",
-      "age": "26",
-      "nationality": "Portugal"
-    },
-    {
-      "player_id": "817-abdullah-al-hamdan",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Abdullah Al-Hamdan",
-      "position": "F",
-      "number": "9",
-      "age": "27",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-mohammed-maran",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Mohammed Maran",
-      "position": "F",
-      "number": "16",
-      "age": "25",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-ângelo-gabriel",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Ângelo Gabriel",
-      "position": "F",
-      "number": "20",
-      "age": "21",
-      "nationality": "Brazil"
-    },
-    {
-      "player_id": "817-saad-haqawi",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Saad Haqawi",
-      "position": "F",
-      "number": "60",
-      "age": "21",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-abdulrahman-sufyani",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Abdulrahman Sufyani",
-      "position": "F",
-      "number": "94",
-      "age": "18",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-rakan-al-ghamdi",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Rakan Al Ghamdi",
-      "position": "F",
-      "number": "56",
-      "age": "21",
-      "nationality": "Saudi Arabia"
-    },
-    {
       "player_id": "929-yassine-bounou",
       "team_id": "929",
       "team": "الهلال",
@@ -1839,6 +1169,676 @@
       "number": "42",
       "age": "19",
       "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-bento",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Bento",
+      "position": "G",
+      "number": "24",
+      "age": "27",
+      "nationality": "Brazil"
+    },
+    {
+      "player_id": "817-nawaf-al-aqidi",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Nawaf Al-Aqidi",
+      "position": "G",
+      "number": "1",
+      "age": "26",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-mubarak-al-buainain",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Mubarak Al Buainain",
+      "position": "G",
+      "number": "61",
+      "age": "21",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-abdulrahman-al-otaibi",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Abdulrahman Al Otaibi",
+      "position": "G",
+      "number": "53",
+      "age": "18",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-abdulhadi-al-alwan",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Abdulhadi Al-Alwan",
+      "position": "G",
+      "number": "22",
+      "age": "",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-sultan-abdullah-saad-al-mas",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Sultan Abdullah Saad Al Mas",
+      "position": "G",
+      "number": "66",
+      "age": "",
+      "nationality": ""
+    },
+    {
+      "player_id": "817-iñigo-martínez",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Iñigo Martínez",
+      "position": "D",
+      "number": "26",
+      "age": "35",
+      "nationality": "Spain"
+    },
+    {
+      "player_id": "817-abdulelah-al-amri",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Abdulelah Al-Amri",
+      "position": "D",
+      "number": "5",
+      "age": "29",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-sultan-al-ghannam",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Sultan Al-Ghannam",
+      "position": "D",
+      "number": "2",
+      "age": "32",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-mohamed-simakan",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Mohamed Simakan",
+      "position": "D",
+      "number": "3",
+      "age": "26",
+      "nationality": "France"
+    },
+    {
+      "player_id": "817-saad-al-nasser",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Saad Al Nasser",
+      "position": "D",
+      "number": "6",
+      "age": "25",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-nawaf-boushal",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Nawaf Boushal",
+      "position": "D",
+      "number": "12",
+      "age": "27",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-nader-al-sharari",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Nader Al Sharari",
+      "position": "D",
+      "number": "4",
+      "age": "30",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-salem-al-najdi",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Salem Al Najdi",
+      "position": "D",
+      "number": "83",
+      "age": "23",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-aser-abdulftah-hwsawi",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Aser Abdulftah Hwsawi",
+      "position": "D",
+      "number": "",
+      "age": "24",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-majed-qasheesh",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Majed Qasheesh",
+      "position": "D",
+      "number": "50",
+      "age": "24",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-awad-aman",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Awad Aman",
+      "position": "D",
+      "number": "70",
+      "age": "21",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-yassine-gays-munsif-sallem",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Yassine Gays Munsif Sallem",
+      "position": "D",
+      "number": "46",
+      "age": "",
+      "nationality": ""
+    },
+    {
+      "player_id": "817-samú-costa",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Samú Costa",
+      "position": "M",
+      "number": "11",
+      "age": "25",
+      "nationality": "Portugal"
+    },
+    {
+      "player_id": "817-sami-al-najei",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Sami Al-Najei",
+      "position": "M",
+      "number": "14",
+      "age": "29",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-abdullah-al-khaibari",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Abdullah Al-Khaibari",
+      "position": "M",
+      "number": "17",
+      "age": "30",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-aiman-yahya",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Aiman Yahya",
+      "position": "M",
+      "number": "23",
+      "age": "25",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-hayder-abdulkareem",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Hayder Abdulkareem",
+      "position": "M",
+      "number": "8",
+      "age": "22",
+      "nationality": "Iraq"
+    },
+    {
+      "player_id": "817-cristiano-ronaldo",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Cristiano Ronaldo",
+      "position": "F",
+      "number": "7",
+      "age": "41",
+      "nationality": "Portugal"
+    },
+    {
+      "player_id": "817-sadio-mané",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Sadio Mané",
+      "position": "F",
+      "number": "10",
+      "age": "34",
+      "nationality": "Senegal"
+    },
+    {
+      "player_id": "817-kingsley-coman",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Kingsley Coman",
+      "position": "F",
+      "number": "21",
+      "age": "30",
+      "nationality": "France"
+    },
+    {
+      "player_id": "817-abdulrahman-ghareeb",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Abdulrahman Ghareeb",
+      "position": "F",
+      "number": "29",
+      "age": "29",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-joão-félix",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "João Félix",
+      "position": "F",
+      "number": "79",
+      "age": "26",
+      "nationality": "Portugal"
+    },
+    {
+      "player_id": "817-abdullah-al-hamdan",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Abdullah Al-Hamdan",
+      "position": "F",
+      "number": "9",
+      "age": "27",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-mohammed-maran",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Mohammed Maran",
+      "position": "F",
+      "number": "16",
+      "age": "25",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-ângelo-gabriel",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Ângelo Gabriel",
+      "position": "F",
+      "number": "20",
+      "age": "21",
+      "nationality": "Brazil"
+    },
+    {
+      "player_id": "817-saad-haqawi",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Saad Haqawi",
+      "position": "F",
+      "number": "60",
+      "age": "21",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-abdulrahman-sufyani",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Abdulrahman Sufyani",
+      "position": "F",
+      "number": "94",
+      "age": "18",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-rakan-al-ghamdi",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Rakan Al Ghamdi",
+      "position": "F",
+      "number": "56",
+      "age": "21",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-koen-casteels",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Koen Casteels",
+      "position": "G",
+      "number": "1",
+      "age": "34",
+      "nationality": "Belgium"
+    },
+    {
+      "player_id": "22022-ahmed-al-kassar",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Ahmed Al-Kassar",
+      "position": "G",
+      "number": "28",
+      "age": "35",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-meshari-sunyur",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Meshari Sunyur",
+      "position": "G",
+      "number": "50",
+      "age": "24",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-wafi-al-aklabi",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Wafi Al Aklabi",
+      "position": "G",
+      "number": "60",
+      "age": "18",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-abgullah-almuhaysin",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Abgullah Almuhaysin",
+      "position": "G",
+      "number": "31",
+      "age": "19",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-nacho",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Nacho",
+      "position": "D",
+      "number": "6",
+      "age": "36",
+      "nationality": "Spain"
+    },
+    {
+      "player_id": "22022-yasser-al-shahrani",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Yasser Al-Shahrani",
+      "position": "D",
+      "number": "12",
+      "age": "34",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-gastón-álvarez",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Gastón Álvarez",
+      "position": "D",
+      "number": "17",
+      "age": "26",
+      "nationality": "Uruguay"
+    },
+    {
+      "player_id": "22022-mohammed-qasem",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Mohammed Qasem",
+      "position": "D",
+      "number": "24",
+      "age": "31",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-waleed-al-ahmed",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Waleed Al-Ahmed",
+      "position": "D",
+      "number": "23",
+      "age": "27",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-jehad-thakri",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Jehad Thakri",
+      "position": "D",
+      "number": "4",
+      "age": "25",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-ali-diabaté",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Ali Diabaté",
+      "position": "D",
+      "number": "26",
+      "age": "19",
+      "nationality": ""
+    },
+    {
+      "player_id": "22022-abdulah-al-jwayzan",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Abdulah Al Jwayzan",
+      "position": "D",
+      "number": "13",
+      "age": "19",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-abdulaziz-tariq-al-qarawi",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Abdulaziz Tariq Al Qarawi",
+      "position": "D",
+      "number": "42",
+      "age": "",
+      "nationality": ""
+    },
+    {
+      "player_id": "22022-julian-weigl",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Julian Weigl",
+      "position": "M",
+      "number": "5",
+      "age": "31",
+      "nationality": "Germany"
+    },
+    {
+      "player_id": "22022-nahitan-nández",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Nahitan Nández",
+      "position": "M",
+      "number": "8",
+      "age": "30",
+      "nationality": "Uruguay"
+    },
+    {
+      "player_id": "22022-tijjani-reijnders",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Tijjani Reijnders",
+      "position": "M",
+      "number": "14",
+      "age": "28",
+      "nationality": "Netherlands"
+    },
+    {
+      "player_id": "22022-turki-al-ammar",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Turki Al-Ammar",
+      "position": "M",
+      "number": "7",
+      "age": "27",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-ali-abdullah-hazzazi",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Ali Abdullah Hazzazi",
+      "position": "M",
+      "number": "11",
+      "age": "32",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-musab-al-juwayr",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Musab Al-Juwayr",
+      "position": "M",
+      "number": "10",
+      "age": "23",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-abdulmalik-al-jaber",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Abdulmalik Al Jaber",
+      "position": "M",
+      "number": "18",
+      "age": "22",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-mohammed-abu-al-shamat",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Mohammed Abu Al-Shamat",
+      "position": "M",
+      "number": "2",
+      "age": "24",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-eyad-houssa",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Eyad Houssa",
+      "position": "M",
+      "number": "27",
+      "age": "19",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-ahmed-al-siyahi",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Ahmed Al Siyahi",
+      "position": "M",
+      "number": "35",
+      "age": "21",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-julián-quiñones",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Julián Quiñones",
+      "position": "F",
+      "number": "33",
+      "age": "29",
+      "nationality": "Mexico"
+    },
+    {
+      "player_id": "22022-mateo-retegui",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Mateo Retegui",
+      "position": "F",
+      "number": "32",
+      "age": "27",
+      "nationality": "Italy"
+    },
+    {
+      "player_id": "22022-abdullah-al-salem",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Abdullah Al-Salem",
+      "position": "F",
+      "number": "9",
+      "age": "33",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-haitham-asiri",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Haitham Asiri",
+      "position": "F",
+      "number": "19",
+      "age": "25",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-mohammed-al-qahtani",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Mohammed Al-Qahtani",
+      "position": "F",
+      "number": "15",
+      "age": "24",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-abdulaziz-al-aliwa",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Abdulaziz Al-Aliwa",
+      "position": "F",
+      "number": "46",
+      "age": "22",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "22022-christopher-bonsu-baah",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Christopher Bonsu Baah",
+      "position": "F",
+      "number": "22",
+      "age": "21",
+      "nationality": "Ghana"
+    },
+    {
+      "player_id": "22022-sani-suleiman",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Sani Suleiman",
+      "position": "F",
+      "number": "70",
+      "age": "20",
+      "nationality": "Nigeria"
+    },
+    {
+      "player_id": "22022-mahamadou-sangaré",
+      "team_id": "22022",
+      "team": "القادسية",
+      "name": "Mahamadou Sangaré",
+      "position": "F",
+      "number": "30",
+      "age": "19",
+      "nationality": "France"
     },
     {
       "player_id": "2276-predrag-rajkovic",
@@ -6793,9 +6793,9 @@
   ],
   "teams": [
     {
-      "team_id": "22022",
+      "team_id": "929",
       "league_id": "saudi-pro-league",
-      "name_ar": "القادسية"
+      "name_ar": "الهلال"
     },
     {
       "team_id": "817",
@@ -6803,9 +6803,9 @@
       "name_ar": "النصر"
     },
     {
-      "team_id": "929",
+      "team_id": "22022",
       "league_id": "saudi-pro-league",
-      "name_ar": "الهلال"
+      "name_ar": "القادسية"
     },
     {
       "team_id": "2276",
@@ -7387,5 +7387,5 @@
       "assists": 1
     }
   ],
-  "lastUpdated": "2026-10-23 19:19 UTC"
+  "lastUpdated": "2026-10-23 22:21 UTC"
 }
