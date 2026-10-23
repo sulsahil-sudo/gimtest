@@ -14,6 +14,18 @@
     },
     {
       "r": 2,
+      "t": "النصر",
+      "p": "10",
+      "w": "8",
+      "d": "1",
+      "l": "1",
+      "gf": "23",
+      "ga": "8",
+      "gd": "+15",
+      "pts": "25"
+    },
+    {
+      "r": 3,
       "t": "الهلال",
       "p": "9",
       "w": "8",
@@ -25,28 +37,16 @@
       "pts": "24"
     },
     {
-      "r": 3,
-      "t": "النصر",
-      "p": "9",
-      "w": "7",
-      "d": "1",
-      "l": "1",
-      "gf": "20",
-      "ga": "7",
-      "gd": "+13",
-      "pts": "22"
-    },
-    {
       "r": 4,
       "t": "الاتحاد",
-      "p": "9",
-      "w": "6",
+      "p": "10",
+      "w": "7",
       "d": "2",
       "l": "1",
-      "gf": "18",
+      "gf": "20",
       "ga": "10",
-      "gd": "+8",
-      "pts": "20"
+      "gd": "+10",
+      "pts": "23"
     },
     {
       "r": 5,
@@ -74,18 +74,6 @@
     },
     {
       "r": 7,
-      "t": "الدرعية",
-      "p": "10",
-      "w": "4",
-      "d": "3",
-      "l": "3",
-      "gf": "9",
-      "ga": "9",
-      "gd": "0",
-      "pts": "15"
-    },
-    {
-      "r": 8,
       "t": "الاتفاق",
       "p": "10",
       "w": "4",
@@ -93,6 +81,18 @@
       "l": "3",
       "gf": "14",
       "ga": "16",
+      "gd": "-2",
+      "pts": "15"
+    },
+    {
+      "r": 8,
+      "t": "الدرعية",
+      "p": "11",
+      "w": "4",
+      "d": "3",
+      "l": "4",
+      "gf": "9",
+      "ga": "11",
       "gd": "-2",
       "pts": "15"
     },
@@ -171,13 +171,13 @@
     {
       "r": 15,
       "t": "الفيصلي",
-      "p": "9",
+      "p": "10",
       "w": "1",
       "d": "4",
-      "l": "4",
-      "gf": "10",
-      "ga": "17",
-      "gd": "-7",
+      "l": "5",
+      "gf": "11",
+      "ga": "20",
+      "gd": "-9",
       "pts": "7"
     },
     {
@@ -224,47 +224,47 @@
       "hs": "1",
       "as": "3",
       "date": "2026-10-23T13:30Z",
-      "status": "87'",
-      "state": "in",
-      "completed": false,
-      "clock": "87'",
+      "status": "FT",
+      "state": "post",
+      "completed": true,
+      "clock": "90'+5'",
       "period": 2
     },
     {
       "home": "الاتحاد",
       "away": "الدرعية",
-      "hs": "0",
+      "hs": "2",
       "as": "0",
       "date": "2026-10-23T15:30Z",
-      "status": "Fri, October 23rd at 11:30 AM EDT",
-      "state": "pre",
-      "completed": false,
-      "clock": "0'",
-      "period": 0
+      "status": "FT",
+      "state": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2
     },
     {
       "home": "الأهلي",
       "away": "الخليج",
-      "hs": "0",
+      "hs": "1",
       "as": "0",
       "date": "2026-10-23T18:00Z",
-      "status": "Fri, October 23rd at 2:00 PM EDT",
-      "state": "pre",
+      "status": "55'",
+      "state": "in",
       "completed": false,
-      "clock": "0'",
-      "period": 0
+      "clock": "55'",
+      "period": 2
     },
     {
       "home": "القادسية",
       "away": "الهلال",
-      "hs": "0",
-      "as": "0",
+      "hs": "1",
+      "as": "1",
       "date": "2026-10-23T18:00Z",
-      "status": "Fri, October 23rd at 2:00 PM EDT",
-      "state": "pre",
+      "status": "60'",
+      "state": "in",
       "completed": false,
-      "clock": "0'",
-      "period": 0
+      "clock": "60'",
+      "period": 2
     },
     {
       "home": "الخلود",
@@ -1151,6 +1151,346 @@
       "nationality": "France"
     },
     {
+      "player_id": "817-bento",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Bento",
+      "position": "G",
+      "number": "24",
+      "age": "27",
+      "nationality": "Brazil"
+    },
+    {
+      "player_id": "817-nawaf-al-aqidi",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Nawaf Al-Aqidi",
+      "position": "G",
+      "number": "1",
+      "age": "26",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-mubarak-al-buainain",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Mubarak Al Buainain",
+      "position": "G",
+      "number": "61",
+      "age": "21",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-abdulrahman-al-otaibi",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Abdulrahman Al Otaibi",
+      "position": "G",
+      "number": "53",
+      "age": "18",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-abdulhadi-al-alwan",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Abdulhadi Al-Alwan",
+      "position": "G",
+      "number": "22",
+      "age": "",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-sultan-abdullah-saad-al-mas",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Sultan Abdullah Saad Al Mas",
+      "position": "G",
+      "number": "66",
+      "age": "",
+      "nationality": ""
+    },
+    {
+      "player_id": "817-iñigo-martínez",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Iñigo Martínez",
+      "position": "D",
+      "number": "26",
+      "age": "35",
+      "nationality": "Spain"
+    },
+    {
+      "player_id": "817-abdulelah-al-amri",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Abdulelah Al-Amri",
+      "position": "D",
+      "number": "5",
+      "age": "29",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-sultan-al-ghannam",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Sultan Al-Ghannam",
+      "position": "D",
+      "number": "2",
+      "age": "32",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-mohamed-simakan",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Mohamed Simakan",
+      "position": "D",
+      "number": "3",
+      "age": "26",
+      "nationality": "France"
+    },
+    {
+      "player_id": "817-saad-al-nasser",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Saad Al Nasser",
+      "position": "D",
+      "number": "6",
+      "age": "25",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-nawaf-boushal",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Nawaf Boushal",
+      "position": "D",
+      "number": "12",
+      "age": "27",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-nader-al-sharari",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Nader Al Sharari",
+      "position": "D",
+      "number": "4",
+      "age": "30",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-salem-al-najdi",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Salem Al Najdi",
+      "position": "D",
+      "number": "83",
+      "age": "23",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-aser-abdulftah-hwsawi",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Aser Abdulftah Hwsawi",
+      "position": "D",
+      "number": "",
+      "age": "24",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-majed-qasheesh",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Majed Qasheesh",
+      "position": "D",
+      "number": "50",
+      "age": "24",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-awad-aman",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Awad Aman",
+      "position": "D",
+      "number": "70",
+      "age": "21",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-yassine-gays-munsif-sallem",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Yassine Gays Munsif Sallem",
+      "position": "D",
+      "number": "46",
+      "age": "",
+      "nationality": ""
+    },
+    {
+      "player_id": "817-samú-costa",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Samú Costa",
+      "position": "M",
+      "number": "11",
+      "age": "25",
+      "nationality": "Portugal"
+    },
+    {
+      "player_id": "817-sami-al-najei",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Sami Al-Najei",
+      "position": "M",
+      "number": "14",
+      "age": "29",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-abdullah-al-khaibari",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Abdullah Al-Khaibari",
+      "position": "M",
+      "number": "17",
+      "age": "30",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-aiman-yahya",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Aiman Yahya",
+      "position": "M",
+      "number": "23",
+      "age": "25",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-hayder-abdulkareem",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Hayder Abdulkareem",
+      "position": "M",
+      "number": "8",
+      "age": "22",
+      "nationality": "Iraq"
+    },
+    {
+      "player_id": "817-cristiano-ronaldo",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Cristiano Ronaldo",
+      "position": "F",
+      "number": "7",
+      "age": "41",
+      "nationality": "Portugal"
+    },
+    {
+      "player_id": "817-sadio-mané",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Sadio Mané",
+      "position": "F",
+      "number": "10",
+      "age": "34",
+      "nationality": "Senegal"
+    },
+    {
+      "player_id": "817-kingsley-coman",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Kingsley Coman",
+      "position": "F",
+      "number": "21",
+      "age": "30",
+      "nationality": "France"
+    },
+    {
+      "player_id": "817-abdulrahman-ghareeb",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Abdulrahman Ghareeb",
+      "position": "F",
+      "number": "29",
+      "age": "29",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-joão-félix",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "João Félix",
+      "position": "F",
+      "number": "79",
+      "age": "26",
+      "nationality": "Portugal"
+    },
+    {
+      "player_id": "817-abdullah-al-hamdan",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Abdullah Al-Hamdan",
+      "position": "F",
+      "number": "9",
+      "age": "27",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-mohammed-maran",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Mohammed Maran",
+      "position": "F",
+      "number": "16",
+      "age": "25",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-ângelo-gabriel",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Ângelo Gabriel",
+      "position": "F",
+      "number": "20",
+      "age": "21",
+      "nationality": "Brazil"
+    },
+    {
+      "player_id": "817-saad-haqawi",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Saad Haqawi",
+      "position": "F",
+      "number": "60",
+      "age": "21",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-abdulrahman-sufyani",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Abdulrahman Sufyani",
+      "position": "F",
+      "number": "94",
+      "age": "18",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-rakan-al-ghamdi",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Rakan Al Ghamdi",
+      "position": "F",
+      "number": "56",
+      "age": "21",
+      "nationality": "Saudi Arabia"
+    },
+    {
       "player_id": "929-yassine-bounou",
       "team_id": "929",
       "team": "الهلال",
@@ -1498,346 +1838,6 @@
       "position": "F",
       "number": "42",
       "age": "19",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-bento",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Bento",
-      "position": "G",
-      "number": "24",
-      "age": "27",
-      "nationality": "Brazil"
-    },
-    {
-      "player_id": "817-nawaf-al-aqidi",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Nawaf Al-Aqidi",
-      "position": "G",
-      "number": "1",
-      "age": "26",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-mubarak-al-buainain",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Mubarak Al Buainain",
-      "position": "G",
-      "number": "61",
-      "age": "21",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-abdulrahman-al-otaibi",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Abdulrahman Al Otaibi",
-      "position": "G",
-      "number": "53",
-      "age": "18",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-abdulhadi-al-alwan",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Abdulhadi Al-Alwan",
-      "position": "G",
-      "number": "22",
-      "age": "",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-sultan-abdullah-saad-al-mas",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Sultan Abdullah Saad Al Mas",
-      "position": "G",
-      "number": "66",
-      "age": "",
-      "nationality": ""
-    },
-    {
-      "player_id": "817-iñigo-martínez",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Iñigo Martínez",
-      "position": "D",
-      "number": "26",
-      "age": "35",
-      "nationality": "Spain"
-    },
-    {
-      "player_id": "817-abdulelah-al-amri",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Abdulelah Al-Amri",
-      "position": "D",
-      "number": "5",
-      "age": "29",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-sultan-al-ghannam",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Sultan Al-Ghannam",
-      "position": "D",
-      "number": "2",
-      "age": "32",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-mohamed-simakan",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Mohamed Simakan",
-      "position": "D",
-      "number": "3",
-      "age": "26",
-      "nationality": "France"
-    },
-    {
-      "player_id": "817-saad-al-nasser",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Saad Al Nasser",
-      "position": "D",
-      "number": "6",
-      "age": "25",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-nawaf-boushal",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Nawaf Boushal",
-      "position": "D",
-      "number": "12",
-      "age": "27",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-nader-al-sharari",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Nader Al Sharari",
-      "position": "D",
-      "number": "4",
-      "age": "30",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-salem-al-najdi",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Salem Al Najdi",
-      "position": "D",
-      "number": "83",
-      "age": "23",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-aser-abdulftah-hwsawi",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Aser Abdulftah Hwsawi",
-      "position": "D",
-      "number": "",
-      "age": "24",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-majed-qasheesh",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Majed Qasheesh",
-      "position": "D",
-      "number": "50",
-      "age": "24",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-awad-aman",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Awad Aman",
-      "position": "D",
-      "number": "70",
-      "age": "21",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-yassine-gays-munsif-sallem",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Yassine Gays Munsif Sallem",
-      "position": "D",
-      "number": "46",
-      "age": "",
-      "nationality": ""
-    },
-    {
-      "player_id": "817-samú-costa",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Samú Costa",
-      "position": "M",
-      "number": "11",
-      "age": "25",
-      "nationality": "Portugal"
-    },
-    {
-      "player_id": "817-sami-al-najei",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Sami Al-Najei",
-      "position": "M",
-      "number": "14",
-      "age": "29",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-abdullah-al-khaibari",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Abdullah Al-Khaibari",
-      "position": "M",
-      "number": "17",
-      "age": "30",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-aiman-yahya",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Aiman Yahya",
-      "position": "M",
-      "number": "23",
-      "age": "25",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-hayder-abdulkareem",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Hayder Abdulkareem",
-      "position": "M",
-      "number": "8",
-      "age": "22",
-      "nationality": "Iraq"
-    },
-    {
-      "player_id": "817-cristiano-ronaldo",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Cristiano Ronaldo",
-      "position": "F",
-      "number": "7",
-      "age": "41",
-      "nationality": "Portugal"
-    },
-    {
-      "player_id": "817-sadio-mané",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Sadio Mané",
-      "position": "F",
-      "number": "10",
-      "age": "34",
-      "nationality": "Senegal"
-    },
-    {
-      "player_id": "817-kingsley-coman",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Kingsley Coman",
-      "position": "F",
-      "number": "21",
-      "age": "30",
-      "nationality": "France"
-    },
-    {
-      "player_id": "817-abdulrahman-ghareeb",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Abdulrahman Ghareeb",
-      "position": "F",
-      "number": "29",
-      "age": "29",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-joão-félix",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "João Félix",
-      "position": "F",
-      "number": "79",
-      "age": "26",
-      "nationality": "Portugal"
-    },
-    {
-      "player_id": "817-abdullah-al-hamdan",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Abdullah Al-Hamdan",
-      "position": "F",
-      "number": "9",
-      "age": "27",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-mohammed-maran",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Mohammed Maran",
-      "position": "F",
-      "number": "16",
-      "age": "25",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-ângelo-gabriel",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Ângelo Gabriel",
-      "position": "F",
-      "number": "20",
-      "age": "21",
-      "nationality": "Brazil"
-    },
-    {
-      "player_id": "817-saad-haqawi",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Saad Haqawi",
-      "position": "F",
-      "number": "60",
-      "age": "21",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-abdulrahman-sufyani",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Abdulrahman Sufyani",
-      "position": "F",
-      "number": "94",
-      "age": "18",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "817-rakan-al-ghamdi",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Rakan Al Ghamdi",
-      "position": "F",
-      "number": "56",
-      "age": "21",
       "nationality": "Saudi Arabia"
     },
     {
@@ -2751,326 +2751,6 @@
       "nationality": "Saudi Arabia"
     },
     {
-      "player_id": "131746-nikola-vasilj",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Nikola Vasilj",
-      "position": "G",
-      "number": "22",
-      "age": "30",
-      "nationality": "Bosnia and Herzegovina"
-    },
-    {
-      "player_id": "131746-waleed-ali",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Waleed Ali",
-      "position": "G",
-      "number": "33",
-      "age": "40",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-ameen-al-bukhari",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Ameen Al-Bukhari",
-      "position": "G",
-      "number": "97",
-      "age": "29",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-muteb-sharahili",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Muteb Sharahili",
-      "position": "G",
-      "number": "22",
-      "age": "33",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-mansour-hibatullah-al-sibyani",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Mansour Hibatullah Al Sibyani",
-      "position": "G",
-      "number": "34",
-      "age": "",
-      "nationality": ""
-    },
-    {
-      "player_id": "131746-berat-djimsiti",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Berat Djimsiti",
-      "position": "D",
-      "number": "19",
-      "age": "33",
-      "nationality": "Albania"
-    },
-    {
-      "player_id": "131746-chancel-mbemba",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Chancel Mbemba",
-      "position": "D",
-      "number": "99",
-      "age": "32",
-      "nationality": "Congo DR"
-    },
-    {
-      "player_id": "131746-saeed-al-rabiei",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Saeed Al-Rabiei",
-      "position": "D",
-      "number": "4",
-      "age": "32",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-hussain-al-sabiyani",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Hussain Al-Sabiyani",
-      "position": "D",
-      "number": "16",
-      "age": "25",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-abdulaziz-al-faraj",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Abdulaziz Al Faraj",
-      "position": "D",
-      "number": "2",
-      "age": "23",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-qassem-lajami",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Qassem Lajami",
-      "position": "D",
-      "number": "87",
-      "age": "30",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-fahad-al-obaid",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Fahad Al Obaid",
-      "position": "D",
-      "number": "24",
-      "age": "33",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-khalid-al-asiri",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Khalid Al Asiri",
-      "position": "D",
-      "number": "78",
-      "age": "21",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-taher-wadi",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Taher Wadi",
-      "position": "D",
-      "number": "12",
-      "age": "24",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-mohamed-thaiban-hameran",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Mohamed Thaiban Hameran",
-      "position": "D",
-      "number": "21",
-      "age": "29",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-abdulelah-al-jaaferi",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Abdulelah Al Jaaferi",
-      "position": "D",
-      "number": "20",
-      "age": "21",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-idrissa-gueye",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Idrissa Gueye",
-      "position": "M",
-      "number": "5",
-      "age": "37",
-      "nationality": "Senegal"
-    },
-    {
-      "player_id": "131746-óscar-rodríguez",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Óscar Rodríguez",
-      "position": "M",
-      "number": "14",
-      "age": "28",
-      "nationality": "Spain"
-    },
-    {
-      "player_id": "131746-abdulelah-al-malki",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Abdulelah Al-Malki",
-      "position": "M",
-      "number": "88",
-      "age": "32",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-enzo-millot",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Enzo Millot",
-      "position": "M",
-      "number": "20",
-      "age": "24",
-      "nationality": "France"
-    },
-    {
-      "player_id": "131746-hussain-al-qahtani",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Hussain Al-Qahtani",
-      "position": "M",
-      "number": "52",
-      "age": "31",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-sultan-al-farhan",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Sultan Al Farhan",
-      "position": "M",
-      "number": "6",
-      "age": "30",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-ziyad-al-qahtani",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Ziyad Al Qahtani",
-      "position": "M",
-      "number": "8",
-      "age": "30",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-mathys-de-carvalho",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Mathys De Carvalho",
-      "position": "M",
-      "number": "",
-      "age": "21",
-      "nationality": "Portugal"
-    },
-    {
-      "player_id": "131746-gaëtan-laborde",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Gaëtan Laborde",
-      "position": "F",
-      "number": "9",
-      "age": "32",
-      "nationality": "France"
-    },
-    {
-      "player_id": "131746-hatan-bahbri",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Hatan Bahbri",
-      "position": "F",
-      "number": "11",
-      "age": "34",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-darwin-núñez",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Darwin Núñez",
-      "position": "F",
-      "number": "29",
-      "age": "27",
-      "nationality": "Uruguay"
-    },
-    {
-      "player_id": "131746-meshari-al-nemer",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Meshari Al Nemer",
-      "position": "F",
-      "number": "75",
-      "age": "23",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-abdullah-al-zaid",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Abdullah Al Zaid",
-      "position": "F",
-      "number": "32",
-      "age": "22",
-      "nationality": "Saudi Arabia"
-    },
-    {
-      "player_id": "131746-adil-boulbina",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Adil Boulbina",
-      "position": "F",
-      "number": "10",
-      "age": "23",
-      "nationality": "Algeria"
-    },
-    {
-      "player_id": "131746-clayton-diandy",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Clayton Diandy",
-      "position": "F",
-      "number": "17",
-      "age": "20",
-      "nationality": "Senegal"
-    },
-    {
-      "player_id": "131746-lovro-chelfi",
-      "team_id": "131746",
-      "team": "الدرعية",
-      "name": "Lovro Chelfi",
-      "position": "F",
-      "number": "25",
-      "age": "19",
-      "nationality": "Croatia"
-    },
-    {
       "player_id": "8363-marek-rodák",
       "team_id": "8363",
       "team": "الاتفاق",
@@ -3399,6 +3079,326 @@
       "number": "88",
       "age": "",
       "nationality": ""
+    },
+    {
+      "player_id": "131746-nikola-vasilj",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Nikola Vasilj",
+      "position": "G",
+      "number": "22",
+      "age": "30",
+      "nationality": "Bosnia and Herzegovina"
+    },
+    {
+      "player_id": "131746-waleed-ali",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Waleed Ali",
+      "position": "G",
+      "number": "33",
+      "age": "40",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-ameen-al-bukhari",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Ameen Al-Bukhari",
+      "position": "G",
+      "number": "97",
+      "age": "29",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-muteb-sharahili",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Muteb Sharahili",
+      "position": "G",
+      "number": "22",
+      "age": "33",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-mansour-hibatullah-al-sibyani",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Mansour Hibatullah Al Sibyani",
+      "position": "G",
+      "number": "34",
+      "age": "",
+      "nationality": ""
+    },
+    {
+      "player_id": "131746-berat-djimsiti",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Berat Djimsiti",
+      "position": "D",
+      "number": "19",
+      "age": "33",
+      "nationality": "Albania"
+    },
+    {
+      "player_id": "131746-chancel-mbemba",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Chancel Mbemba",
+      "position": "D",
+      "number": "99",
+      "age": "32",
+      "nationality": "Congo DR"
+    },
+    {
+      "player_id": "131746-saeed-al-rabiei",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Saeed Al-Rabiei",
+      "position": "D",
+      "number": "4",
+      "age": "32",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-hussain-al-sabiyani",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Hussain Al-Sabiyani",
+      "position": "D",
+      "number": "16",
+      "age": "25",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-abdulaziz-al-faraj",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Abdulaziz Al Faraj",
+      "position": "D",
+      "number": "2",
+      "age": "23",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-qassem-lajami",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Qassem Lajami",
+      "position": "D",
+      "number": "87",
+      "age": "30",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-fahad-al-obaid",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Fahad Al Obaid",
+      "position": "D",
+      "number": "24",
+      "age": "33",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-khalid-al-asiri",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Khalid Al Asiri",
+      "position": "D",
+      "number": "78",
+      "age": "21",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-taher-wadi",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Taher Wadi",
+      "position": "D",
+      "number": "12",
+      "age": "24",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-mohamed-thaiban-hameran",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Mohamed Thaiban Hameran",
+      "position": "D",
+      "number": "21",
+      "age": "29",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-abdulelah-al-jaaferi",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Abdulelah Al Jaaferi",
+      "position": "D",
+      "number": "20",
+      "age": "21",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-idrissa-gueye",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Idrissa Gueye",
+      "position": "M",
+      "number": "5",
+      "age": "37",
+      "nationality": "Senegal"
+    },
+    {
+      "player_id": "131746-óscar-rodríguez",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Óscar Rodríguez",
+      "position": "M",
+      "number": "14",
+      "age": "28",
+      "nationality": "Spain"
+    },
+    {
+      "player_id": "131746-abdulelah-al-malki",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Abdulelah Al-Malki",
+      "position": "M",
+      "number": "88",
+      "age": "32",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-enzo-millot",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Enzo Millot",
+      "position": "M",
+      "number": "20",
+      "age": "24",
+      "nationality": "France"
+    },
+    {
+      "player_id": "131746-hussain-al-qahtani",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Hussain Al-Qahtani",
+      "position": "M",
+      "number": "52",
+      "age": "31",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-sultan-al-farhan",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Sultan Al Farhan",
+      "position": "M",
+      "number": "6",
+      "age": "30",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-ziyad-al-qahtani",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Ziyad Al Qahtani",
+      "position": "M",
+      "number": "8",
+      "age": "30",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-mathys-de-carvalho",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Mathys De Carvalho",
+      "position": "M",
+      "number": "",
+      "age": "21",
+      "nationality": "Portugal"
+    },
+    {
+      "player_id": "131746-gaëtan-laborde",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Gaëtan Laborde",
+      "position": "F",
+      "number": "9",
+      "age": "32",
+      "nationality": "France"
+    },
+    {
+      "player_id": "131746-hatan-bahbri",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Hatan Bahbri",
+      "position": "F",
+      "number": "11",
+      "age": "34",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-darwin-núñez",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Darwin Núñez",
+      "position": "F",
+      "number": "29",
+      "age": "27",
+      "nationality": "Uruguay"
+    },
+    {
+      "player_id": "131746-meshari-al-nemer",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Meshari Al Nemer",
+      "position": "F",
+      "number": "75",
+      "age": "23",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-abdullah-al-zaid",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Abdullah Al Zaid",
+      "position": "F",
+      "number": "32",
+      "age": "22",
+      "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "131746-adil-boulbina",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Adil Boulbina",
+      "position": "F",
+      "number": "10",
+      "age": "23",
+      "nationality": "Algeria"
+    },
+    {
+      "player_id": "131746-clayton-diandy",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Clayton Diandy",
+      "position": "F",
+      "number": "17",
+      "age": "20",
+      "nationality": "Senegal"
+    },
+    {
+      "player_id": "131746-lovro-chelfi",
+      "team_id": "131746",
+      "team": "الدرعية",
+      "name": "Lovro Chelfi",
+      "position": "F",
+      "number": "25",
+      "age": "19",
+      "nationality": "Croatia"
     },
     {
       "player_id": "22028-hamed-al-shanqiti",
@@ -6798,14 +6798,14 @@
       "name_ar": "القادسية"
     },
     {
-      "team_id": "929",
-      "league_id": "saudi-pro-league",
-      "name_ar": "الهلال"
-    },
-    {
       "team_id": "817",
       "league_id": "saudi-pro-league",
       "name_ar": "النصر"
+    },
+    {
+      "team_id": "929",
+      "league_id": "saudi-pro-league",
+      "name_ar": "الهلال"
     },
     {
       "team_id": "2276",
@@ -6823,14 +6823,14 @@
       "name_ar": "نيوم"
     },
     {
-      "team_id": "131746",
-      "league_id": "saudi-pro-league",
-      "name_ar": "الدرعية"
-    },
-    {
       "team_id": "8363",
       "league_id": "saudi-pro-league",
       "name_ar": "الاتفاق"
+    },
+    {
+      "team_id": "131746",
+      "league_id": "saudi-pro-league",
+      "name_ar": "الدرعية"
     },
     {
       "team_id": "22028",
@@ -7387,5 +7387,5 @@
       "assists": 1
     }
   ],
-  "lastUpdated": "2026-10-23 15:16 UTC"
+  "lastUpdated": "2026-10-23 19:19 UTC"
 }
