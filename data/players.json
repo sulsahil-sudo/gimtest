@@ -680,16 +680,6 @@
     "nationality": "Saudi Arabia"
   },
   {
-    "player_id": "817-yassine-gays-munsif-sallem",
-    "team_id": "817",
-    "team": "النصر",
-    "name": "Yassine Gays Munsif Sallem",
-    "position": "",
-    "number": "46",
-    "age": "",
-    "nationality": ""
-  },
-  {
     "player_id": "817-bento",
     "team_id": "817",
     "team": "النصر",
@@ -858,6 +848,16 @@
     "number": "70",
     "age": "21",
     "nationality": "Saudi Arabia"
+  },
+  {
+    "player_id": "817-yassine-gays-munsif-sallem",
+    "team_id": "817",
+    "team": "النصر",
+    "name": "Yassine Gays Munsif Sallem",
+    "position": "D",
+    "number": "46",
+    "age": "",
+    "nationality": ""
   },
   {
     "player_id": "817-samú-costa",
@@ -3976,7 +3976,7 @@
     "name": "Milan Borjan",
     "position": "G",
     "number": "82",
-    "age": "38",
+    "age": "39",
     "nationality": "Canada"
   },
   {
@@ -5296,7 +5296,7 @@
     "name": "Saad Al-Shurafa",
     "position": "F",
     "number": "49",
-    "age": "21",
+    "age": "22",
     "nationality": "Saudi Arabia"
   },
   {

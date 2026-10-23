@@ -219,28 +219,52 @@
   ],
   "results": [
     {
-      "home": "الحزم",
-      "away": "الفيحاء",
-      "hs": "2",
-      "as": "2",
-      "date": "2026-10-22T13:40Z",
-      "status": "FT",
-      "state": "post",
-      "completed": true,
-      "clock": "90'+6'",
-      "period": 2
+      "home": "الفيصلي",
+      "away": "النصر",
+      "hs": "0",
+      "as": "0",
+      "date": "2026-10-23T13:30Z",
+      "status": "Fri, October 23rd at 9:30 AM EDT",
+      "state": "pre",
+      "completed": false,
+      "clock": "0'",
+      "period": 0
     },
     {
-      "home": "الفتح",
-      "away": "الشباب",
-      "hs": "1",
-      "as": "3",
-      "date": "2026-10-22T14:45Z",
-      "status": "FT",
-      "state": "post",
-      "completed": true,
-      "clock": "90'+5'",
-      "period": 2
+      "home": "الاتحاد",
+      "away": "الدرعية",
+      "hs": "0",
+      "as": "0",
+      "date": "2026-10-23T15:30Z",
+      "status": "Fri, October 23rd at 11:30 AM EDT",
+      "state": "pre",
+      "completed": false,
+      "clock": "0'",
+      "period": 0
+    },
+    {
+      "home": "الأهلي",
+      "away": "الخليج",
+      "hs": "0",
+      "as": "0",
+      "date": "2026-10-23T18:00Z",
+      "status": "Fri, October 23rd at 2:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "clock": "0'",
+      "period": 0
+    },
+    {
+      "home": "القادسية",
+      "away": "الهلال",
+      "hs": "0",
+      "as": "0",
+      "date": "2026-10-23T18:00Z",
+      "status": "Fri, October 23rd at 2:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "clock": "0'",
+      "period": 0
     },
     {
       "home": "الخلود",
@@ -507,52 +531,28 @@
       "period": 2
     },
     {
-      "home": "الفيصلي",
-      "away": "النصر",
-      "hs": "0",
-      "as": "0",
-      "date": "2026-10-23T13:30Z",
-      "status": "Fri, October 23rd at 9:30 AM EDT",
-      "state": "pre",
-      "completed": false,
-      "clock": "0'",
-      "period": 0
+      "home": "الحزم",
+      "away": "الفيحاء",
+      "hs": "2",
+      "as": "2",
+      "date": "2026-10-22T13:40Z",
+      "status": "FT",
+      "state": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2
     },
     {
-      "home": "الاتحاد",
-      "away": "الدرعية",
-      "hs": "0",
-      "as": "0",
-      "date": "2026-10-23T15:30Z",
-      "status": "Fri, October 23rd at 11:30 AM EDT",
-      "state": "pre",
-      "completed": false,
-      "clock": "0'",
-      "period": 0
-    },
-    {
-      "home": "الأهلي",
-      "away": "الخليج",
-      "hs": "0",
-      "as": "0",
-      "date": "2026-10-23T18:00Z",
-      "status": "Fri, October 23rd at 2:00 PM EDT",
-      "state": "pre",
-      "completed": false,
-      "clock": "0'",
-      "period": 0
-    },
-    {
-      "home": "القادسية",
-      "away": "الهلال",
-      "hs": "0",
-      "as": "0",
-      "date": "2026-10-23T18:00Z",
-      "status": "Fri, October 23rd at 2:00 PM EDT",
-      "state": "pre",
-      "completed": false,
-      "clock": "0'",
-      "period": 0
+      "home": "الفتح",
+      "away": "الشباب",
+      "hs": "1",
+      "as": "3",
+      "date": "2026-10-22T14:45Z",
+      "status": "FT",
+      "state": "post",
+      "completed": true,
+      "clock": "90'+5'",
+      "period": 2
     },
     {
       "home": "نيوم",
@@ -1501,16 +1501,6 @@
       "nationality": "Saudi Arabia"
     },
     {
-      "player_id": "817-yassine-gays-munsif-sallem",
-      "team_id": "817",
-      "team": "النصر",
-      "name": "Yassine Gays Munsif Sallem",
-      "position": "",
-      "number": "46",
-      "age": "",
-      "nationality": ""
-    },
-    {
       "player_id": "817-bento",
       "team_id": "817",
       "team": "النصر",
@@ -1679,6 +1669,16 @@
       "number": "70",
       "age": "21",
       "nationality": "Saudi Arabia"
+    },
+    {
+      "player_id": "817-yassine-gays-munsif-sallem",
+      "team_id": "817",
+      "team": "النصر",
+      "name": "Yassine Gays Munsif Sallem",
+      "position": "D",
+      "number": "46",
+      "age": "",
+      "nationality": ""
     },
     {
       "player_id": "817-samú-costa",
@@ -4797,7 +4797,7 @@
       "name": "Milan Borjan",
       "position": "G",
       "number": "82",
-      "age": "38",
+      "age": "39",
       "nationality": "Canada"
     },
     {
@@ -6117,7 +6117,7 @@
       "name": "Saad Al-Shurafa",
       "position": "F",
       "number": "49",
-      "age": "21",
+      "age": "22",
       "nationality": "Saudi Arabia"
     },
     {
@@ -6985,6 +6985,11 @@
       "goals": 3
     },
     {
+      "name": "Lukás Haraslín",
+      "team": "الفتح",
+      "goals": 3
+    },
+    {
       "name": "Wilfried Kanga",
       "team": "الفتح",
       "goals": 3
@@ -7065,7 +7070,12 @@
       "goals": 2
     },
     {
-      "name": "Lukás Haraslín",
+      "name": "Sofiane Bendebka",
+      "team": "الحزم",
+      "goals": 2
+    },
+    {
+      "name": "Mourad Batna",
       "team": "الفتح",
       "goals": 2
     },
@@ -7075,8 +7085,13 @@
       "goals": 2
     },
     {
-      "name": "Sofiane Bendebka",
-      "team": "الحزم",
+      "name": "Faisal Al Abdulwahed",
+      "team": "الفتح",
+      "goals": 2
+    },
+    {
+      "name": "Fashion Sakala",
+      "team": "الفيحاء",
       "goals": 2
     },
     {
@@ -7085,18 +7100,13 @@
       "goals": 2
     },
     {
-      "name": "Mourad Batna",
-      "team": "الفتح",
+      "name": "Roger Martínez",
+      "team": "الشباب",
       "goals": 2
     },
     {
       "name": "Sadio Mané",
       "team": "النصر",
-      "goals": 2
-    },
-    {
-      "name": "Faisal Al Abdulwahed",
-      "team": "الفتح",
       "goals": 2
     },
     {
@@ -7110,8 +7120,8 @@
       "goals": 2
     },
     {
-      "name": "Roger Martínez",
-      "team": "الشباب",
+      "name": "Jason",
+      "team": "الفيحاء",
       "goals": 2
     },
     {
@@ -7123,16 +7133,6 @@
       "name": "Abdulelah Al-Amri",
       "team": "النصر",
       "goals": 2
-    },
-    {
-      "name": "Jason",
-      "team": "الفيحاء",
-      "goals": 2
-    },
-    {
-      "name": "Théo Bongonda",
-      "team": "الفيصلي",
-      "goals": 2
     }
   ],
   "assists": [
@@ -7140,6 +7140,11 @@
       "name": "Ollie Watkins",
       "team": "الهلال",
       "assists": 4
+    },
+    {
+      "name": "Mourad Batna",
+      "team": "الفتح",
+      "assists": 3
     },
     {
       "name": "Christopher Bonsu Baah",
@@ -7169,11 +7174,6 @@
     {
       "name": "Julián Quiñones",
       "team": "القادسية",
-      "assists": 3
-    },
-    {
-      "name": "Mourad Batna",
-      "team": "الفتح",
       "assists": 3
     },
     {
@@ -7207,6 +7207,16 @@
       "assists": 2
     },
     {
+      "name": "Josh Brownhill",
+      "team": "الشباب",
+      "assists": 2
+    },
+    {
+      "name": "Yacine Adli",
+      "team": "الشباب",
+      "assists": 2
+    },
+    {
       "name": "Musab Al-Juwayr",
       "team": "القادسية",
       "assists": 2
@@ -7222,11 +7232,6 @@
       "assists": 2
     },
     {
-      "name": "Josh Brownhill",
-      "team": "الشباب",
-      "assists": 2
-    },
-    {
       "name": "Coba da Costa",
       "team": "الخلود",
       "assists": 2
@@ -7239,6 +7244,11 @@
     {
       "name": "Francisco Trincão",
       "team": "الأهلي",
+      "assists": 2
+    },
+    {
+      "name": "Roger Martínez",
+      "team": "الشباب",
       "assists": 2
     },
     {
@@ -7282,9 +7292,29 @@
       "assists": 2
     },
     {
+      "name": "Jason",
+      "team": "الفيحاء",
+      "assists": 2
+    },
+    {
+      "name": "Amir Sayoud",
+      "team": "الحزم",
+      "assists": 2
+    },
+    {
       "name": "Richard Ríos",
       "team": "الاتحاد",
       "assists": 2
+    },
+    {
+      "name": "Wilfried Kanga",
+      "team": "الفتح",
+      "assists": 1
+    },
+    {
+      "name": "Sofiane Bendebka",
+      "team": "الحزم",
+      "assists": 1
     },
     {
       "name": "Alexandre Lacazette",
@@ -7302,6 +7332,11 @@
       "assists": 1
     },
     {
+      "name": "Zaydou Youssef",
+      "team": "الفتح",
+      "assists": 1
+    },
+    {
       "name": "Radhi Al-Otaibi",
       "team": "الاتفاق",
       "assists": 1
@@ -7314,6 +7349,11 @@
     {
       "name": "Yasir Shammari",
       "team": "الاتفاق",
+      "assists": 1
+    },
+    {
+      "name": "Ahmed Al-Shamrani",
+      "team": "الحزم",
       "assists": 1
     },
     {
@@ -7337,11 +7377,6 @@
       "assists": 1
     },
     {
-      "name": "Yacine Adli",
-      "team": "الشباب",
-      "assists": 1
-    },
-    {
       "name": "Valentin Atangana",
       "team": "الأهلي",
       "assists": 1
@@ -7350,42 +7385,7 @@
       "name": "Kalidou Koulibaly",
       "team": "الهلال",
       "assists": 1
-    },
-    {
-      "name": "Sofiane Bendebka",
-      "team": "الحزم",
-      "assists": 1
-    },
-    {
-      "name": "Ondrej Duda",
-      "team": "الاتفاق",
-      "assists": 1
-    },
-    {
-      "name": "Steven Bergwijn",
-      "team": "الاتحاد",
-      "assists": 1
-    },
-    {
-      "name": "Iker Kortajarena",
-      "team": "الخلود",
-      "assists": 1
-    },
-    {
-      "name": "Zaydou Youssef",
-      "team": "الفتح",
-      "assists": 1
-    },
-    {
-      "name": "Christian Bassogog",
-      "team": "الفيصلي",
-      "assists": 1
-    },
-    {
-      "name": "Islam Hawsawi",
-      "team": "نيوم",
-      "assists": 1
     }
   ],
-  "lastUpdated": "2026-10-23 05:28 UTC"
+  "lastUpdated": "2026-10-23 10:24 UTC"
 }
