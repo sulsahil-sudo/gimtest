@@ -2,14 +2,14 @@
   {
     "home": "الفيصلي",
     "away": "النصر",
-    "hs": "0",
-    "as": "0",
+    "hs": "1",
+    "as": "3",
     "date": "2026-10-23T13:30Z",
-    "status": "Fri, October 23rd at 9:30 AM EDT",
-    "state": "pre",
+    "status": "87'",
+    "state": "in",
     "completed": false,
-    "clock": "0'",
-    "period": 0
+    "clock": "87'",
+    "period": 2
   },
   {
     "home": "الاتحاد",
