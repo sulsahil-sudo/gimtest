@@ -5440,6 +5440,16 @@
     "nationality": "Saudi Arabia"
   },
   {
+    "player_id": "18459-ali-ahmed-ali-halawi-sharahili",
+    "team_id": "18459",
+    "team": "التعاون",
+    "name": "Ali Ahmed Ali Halawi Sharahili",
+    "position": "D",
+    "number": "87",
+    "age": "",
+    "nationality": ""
+  },
+  {
     "player_id": "18459-aschraf-el-mahdioui",
     "team_id": "18459",
     "team": "التعاون",
@@ -5536,6 +5546,16 @@
     "name": "Pape Mustapha Samb",
     "position": "M",
     "number": "4",
+    "age": "",
+    "nationality": ""
+  },
+  {
+    "player_id": "18459-adel-sami-fallatah",
+    "team_id": "18459",
+    "team": "التعاون",
+    "name": "Adel Sami Fallatah",
+    "position": "M",
+    "number": "63",
     "age": "",
     "nationality": ""
   },

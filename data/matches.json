@@ -17,23 +17,23 @@
     "hs": "0",
     "as": "3",
     "date": "2026-10-24T15:05Z",
-    "status": "87'",
-    "state": "in",
-    "completed": false,
-    "clock": "87'",
+    "status": "FT",
+    "state": "post",
+    "completed": true,
+    "clock": "90'+4'",
     "period": 2
   },
   {
     "home": "الرياض",
     "away": "التعاون",
-    "hs": "0",
+    "hs": "1",
     "as": "0",
     "date": "2026-10-24T18:00Z",
-    "status": "Sat, October 24th at 2:00 PM EDT",
-    "state": "pre",
+    "status": "HT",
+    "state": "in",
     "completed": false,
-    "clock": "0'",
-    "period": 0
+    "clock": "45'+8'",
+    "period": 1
   },
   {
     "home": "الخلود",
