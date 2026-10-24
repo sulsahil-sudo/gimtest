@@ -63,14 +63,14 @@
     {
       "r": 6,
       "t": "نيوم",
-      "p": "10",
-      "w": "5",
+      "p": "11",
+      "w": "6",
       "d": "1",
       "l": "4",
-      "gf": "14",
+      "gf": "16",
       "ga": "9",
-      "gd": "+5",
-      "pts": "16"
+      "gd": "+7",
+      "pts": "19"
     },
     {
       "r": 7,
@@ -207,13 +207,13 @@
     {
       "r": 18,
       "t": "أبها",
-      "p": "8",
+      "p": "9",
       "w": "0",
       "d": "2",
-      "l": "6",
+      "l": "7",
       "gf": "6",
-      "ga": "15",
-      "gd": "-9",
+      "ga": "17",
+      "gd": "-11",
       "pts": "2"
     }
   ],
@@ -221,26 +221,26 @@
     {
       "home": "نيوم",
       "away": "أبها",
-      "hs": "0",
+      "hs": "2",
       "as": "0",
       "date": "2026-10-24T14:00Z",
-      "status": "Sat, October 24th at 10:00 AM EDT",
-      "state": "pre",
-      "completed": false,
-      "clock": "0'",
-      "period": 0
+      "status": "FT",
+      "state": "post",
+      "completed": true,
+      "clock": "90'+5'",
+      "period": 2
     },
     {
       "home": "الخلود",
       "away": "الاتفاق",
       "hs": "0",
-      "as": "0",
+      "as": "3",
       "date": "2026-10-24T15:05Z",
-      "status": "Sat, October 24th at 11:05 AM EDT",
-      "state": "pre",
+      "status": "87'",
+      "state": "in",
       "completed": false,
-      "clock": "0'",
-      "period": 0
+      "clock": "87'",
+      "period": 2
     },
     {
       "home": "الرياض",
@@ -7387,5 +7387,5 @@
       "assists": 1
     }
   ],
-  "lastUpdated": "2026-10-24 13:30 UTC"
+  "lastUpdated": "2026-10-24 16:52 UTC"
 }

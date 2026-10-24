@@ -2,26 +2,26 @@
   {
     "home": "نيوم",
     "away": "أبها",
-    "hs": "0",
+    "hs": "2",
     "as": "0",
     "date": "2026-10-24T14:00Z",
-    "status": "Sat, October 24th at 10:00 AM EDT",
-    "state": "pre",
-    "completed": false,
-    "clock": "0'",
-    "period": 0
+    "status": "FT",
+    "state": "post",
+    "completed": true,
+    "clock": "90'+5'",
+    "period": 2
   },
   {
     "home": "الخلود",
     "away": "الاتفاق",
     "hs": "0",
-    "as": "0",
+    "as": "3",
     "date": "2026-10-24T15:05Z",
-    "status": "Sat, October 24th at 11:05 AM EDT",
-    "state": "pre",
+    "status": "87'",
+    "state": "in",
     "completed": false,
-    "clock": "0'",
-    "period": 0
+    "clock": "87'",
+    "period": 2
   },
   {
     "home": "الرياض",
