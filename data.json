@@ -219,52 +219,40 @@
   ],
   "results": [
     {
-      "home": "الفيصلي",
-      "away": "النصر",
-      "hs": "1",
-      "as": "3",
-      "date": "2026-10-23T13:30Z",
-      "status": "FT",
-      "state": "post",
-      "completed": true,
-      "clock": "90'+5'",
-      "period": 2
-    },
-    {
-      "home": "الاتحاد",
-      "away": "الدرعية",
-      "hs": "2",
+      "home": "نيوم",
+      "away": "أبها",
+      "hs": "0",
       "as": "0",
-      "date": "2026-10-23T15:30Z",
-      "status": "FT",
-      "state": "post",
-      "completed": true,
-      "clock": "90'+6'",
-      "period": 2
+      "date": "2026-10-24T14:00Z",
+      "status": "Sat, October 24th at 10:00 AM EDT",
+      "state": "pre",
+      "completed": false,
+      "clock": "0'",
+      "period": 0
     },
     {
-      "home": "الأهلي",
-      "away": "الخليج",
-      "hs": "4",
-      "as": "1",
-      "date": "2026-10-23T18:00Z",
-      "status": "FT",
-      "state": "post",
-      "completed": true,
-      "clock": "90'+7'",
-      "period": 2
+      "home": "الخلود",
+      "away": "الاتفاق",
+      "hs": "0",
+      "as": "0",
+      "date": "2026-10-24T15:05Z",
+      "status": "Sat, October 24th at 11:05 AM EDT",
+      "state": "pre",
+      "completed": false,
+      "clock": "0'",
+      "period": 0
     },
     {
-      "home": "القادسية",
-      "away": "الهلال",
-      "hs": "2",
-      "as": "3",
-      "date": "2026-10-23T18:00Z",
-      "status": "FT",
-      "state": "post",
-      "completed": true,
-      "clock": "90'+6'",
-      "period": 2
+      "home": "الرياض",
+      "away": "التعاون",
+      "hs": "0",
+      "as": "0",
+      "date": "2026-10-24T18:00Z",
+      "status": "Sat, October 24th at 2:00 PM EDT",
+      "state": "pre",
+      "completed": false,
+      "clock": "0'",
+      "period": 0
     },
     {
       "home": "الخلود",
@@ -555,40 +543,52 @@
       "period": 2
     },
     {
-      "home": "نيوم",
-      "away": "أبها",
-      "hs": "0",
-      "as": "0",
-      "date": "2026-10-24T14:00Z",
-      "status": "Sat, October 24th at 10:00 AM EDT",
-      "state": "pre",
-      "completed": false,
-      "clock": "0'",
-      "period": 0
+      "home": "الفيصلي",
+      "away": "النصر",
+      "hs": "1",
+      "as": "3",
+      "date": "2026-10-23T13:30Z",
+      "status": "FT",
+      "state": "post",
+      "completed": true,
+      "clock": "90'+5'",
+      "period": 2
     },
     {
-      "home": "الخلود",
-      "away": "الاتفاق",
-      "hs": "0",
+      "home": "الاتحاد",
+      "away": "الدرعية",
+      "hs": "2",
       "as": "0",
-      "date": "2026-10-24T15:05Z",
-      "status": "Sat, October 24th at 11:05 AM EDT",
-      "state": "pre",
-      "completed": false,
-      "clock": "0'",
-      "period": 0
+      "date": "2026-10-23T15:30Z",
+      "status": "FT",
+      "state": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2
     },
     {
-      "home": "الرياض",
-      "away": "التعاون",
-      "hs": "0",
-      "as": "0",
-      "date": "2026-10-24T18:00Z",
-      "status": "Sat, October 24th at 2:00 PM EDT",
-      "state": "pre",
-      "completed": false,
-      "clock": "0'",
-      "period": 0
+      "home": "الأهلي",
+      "away": "الخليج",
+      "hs": "4",
+      "as": "1",
+      "date": "2026-10-23T18:00Z",
+      "status": "FT",
+      "state": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2
+    },
+    {
+      "home": "القادسية",
+      "away": "الهلال",
+      "hs": "2",
+      "as": "3",
+      "date": "2026-10-23T18:00Z",
+      "status": "FT",
+      "state": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2
     },
     {
       "home": "أبها",
@@ -3607,7 +3607,7 @@
       "name": "Rakan Jaman",
       "position": "M",
       "number": "52",
-      "age": "20",
+      "age": "21",
       "nationality": "Saudi Arabia"
     },
     {
@@ -5187,7 +5187,7 @@
       "name": "Omar Colley",
       "position": "D",
       "number": "25",
-      "age": "33",
+      "age": "34",
       "nationality": "Gambia"
     },
     {
@@ -5527,7 +5527,7 @@
       "name": "Mohammed Jahfali",
       "position": "D",
       "number": "70",
-      "age": "35",
+      "age": "36",
       "nationality": "Saudi Arabia"
     },
     {
@@ -5666,7 +5666,7 @@
       "team": "الفيصلي",
       "name": "Abdulrahman Al Safari",
       "position": "M",
-      "number": "",
+      "number": "18",
       "age": "33",
       "nationality": "Saudi Arabia"
     },
@@ -6887,7 +6887,12 @@
     {
       "name": "Ivan Toney",
       "team": "الأهلي",
-      "goals": 11
+      "goals": 13
+    },
+    {
+      "name": "Mateo Retegui",
+      "team": "القادسية",
+      "goals": 7
     },
     {
       "name": "Youssef En-Nesyri",
@@ -6895,14 +6900,19 @@
       "goals": 7
     },
     {
-      "name": "Mateo Retegui",
-      "team": "القادسية",
+      "name": "Francisco Trincão",
+      "team": "الأهلي",
       "goals": 6
     },
     {
-      "name": "Alexandre Lacazette",
-      "team": "نيوم",
-      "goals": 5
+      "name": "George Ilenikhena",
+      "team": "الاتحاد",
+      "goals": 6
+    },
+    {
+      "name": "Gabriel Martinelli",
+      "team": "الهلال",
+      "goals": 6
     },
     {
       "name": "Alexandre Mendy",
@@ -6910,13 +6920,18 @@
       "goals": 5
     },
     {
-      "name": "Francisco Trincão",
-      "team": "الأهلي",
+      "name": "Alexandre Lacazette",
+      "team": "نيوم",
       "goals": 5
     },
     {
-      "name": "Steven Bergwijn",
-      "team": "الاتحاد",
+      "name": "Julián Quiñones",
+      "team": "القادسية",
+      "goals": 5
+    },
+    {
+      "name": "Sergej Milinkovic-Savic",
+      "team": "الهلال",
       "goals": 5
     },
     {
@@ -6925,13 +6940,8 @@
       "goals": 5
     },
     {
-      "name": "George Ilenikhena",
+      "name": "Steven Bergwijn",
       "team": "الاتحاد",
-      "goals": 5
-    },
-    {
-      "name": "Gabriel Martinelli",
-      "team": "الهلال",
       "goals": 5
     },
     {
@@ -6940,8 +6950,8 @@
       "goals": 4
     },
     {
-      "name": "Julián Quiñones",
-      "team": "القادسية",
+      "name": "Rúben Neves",
+      "team": "الهلال",
       "goals": 4
     },
     {
@@ -6955,18 +6965,18 @@
       "goals": 4
     },
     {
-      "name": "Sergej Milinkovic-Savic",
-      "team": "الهلال",
-      "goals": 4
-    },
-    {
-      "name": "Amadou Koné",
-      "team": "نيوم",
+      "name": "Ângelo Gabriel",
+      "team": "النصر",
       "goals": 4
     },
     {
       "name": "Cristiano Ronaldo",
       "team": "النصر",
+      "goals": 4
+    },
+    {
+      "name": "Amadou Koné",
+      "team": "نيوم",
       "goals": 4
     },
     {
@@ -7005,8 +7015,13 @@
       "goals": 3
     },
     {
-      "name": "Rúben Neves",
+      "name": "Sultan Mandash",
       "team": "الهلال",
+      "goals": 3
+    },
+    {
+      "name": "João Félix",
+      "team": "النصر",
       "goals": 3
     },
     {
@@ -7020,13 +7035,18 @@
       "goals": 3
     },
     {
+      "name": "Samú Costa",
+      "team": "النصر",
+      "goals": 3
+    },
+    {
       "name": "Lázaro",
       "team": "الفيحاء",
       "goals": 3
     },
     {
-      "name": "Sultan Mandash",
-      "team": "الهلال",
+      "name": "Abdullah Al-Hamdan",
+      "team": "النصر",
       "goals": 3
     },
     {
@@ -7040,28 +7060,23 @@
       "goals": 3
     },
     {
-      "name": "Ângelo Gabriel",
-      "team": "النصر",
-      "goals": 3
-    },
-    {
-      "name": "João Félix",
-      "team": "النصر",
-      "goals": 3
-    },
-    {
       "name": "Abdulaziz Aldhuwayhi",
       "team": "الحزم",
       "goals": 3
     },
     {
-      "name": "Samú Costa",
-      "team": "النصر",
+      "name": "Théo Bongonda",
+      "team": "الفيصلي",
       "goals": 3
     },
     {
       "name": "Darwin Núñez",
       "team": "الدرعية",
+      "goals": 3
+    },
+    {
+      "name": "Artem Bondarenko",
+      "team": "الأهلي",
       "goals": 3
     },
     {
@@ -7080,6 +7095,16 @@
       "goals": 2
     },
     {
+      "name": "Eduard Spertsyan",
+      "team": "الأهلي",
+      "goals": 2
+    },
+    {
+      "name": "Sadio Mané",
+      "team": "النصر",
+      "goals": 2
+    },
+    {
       "name": "Bersant Celina",
       "team": "الاتفاق",
       "goals": 2
@@ -7095,18 +7120,8 @@
       "goals": 2
     },
     {
-      "name": "Eduard Spertsyan",
-      "team": "الأهلي",
-      "goals": 2
-    },
-    {
       "name": "Roger Martínez",
       "team": "الشباب",
-      "goals": 2
-    },
-    {
-      "name": "Sadio Mané",
-      "team": "النصر",
       "goals": 2
     },
     {
@@ -7118,33 +7133,18 @@
       "name": "Álvaro Medrán",
       "team": "الاتفاق",
       "goals": 2
-    },
-    {
-      "name": "Jason",
-      "team": "الفيحاء",
-      "goals": 2
-    },
-    {
-      "name": "Abdullah Al-Hamdan",
-      "team": "النصر",
-      "goals": 2
-    },
-    {
-      "name": "Abdulelah Al-Amri",
-      "team": "النصر",
-      "goals": 2
     }
   ],
   "assists": [
     {
       "name": "Ollie Watkins",
       "team": "الهلال",
-      "assists": 4
+      "assists": 5
     },
     {
-      "name": "Mourad Batna",
-      "team": "الفتح",
-      "assists": 3
+      "name": "Eduard Spertsyan",
+      "team": "الأهلي",
+      "assists": 4
     },
     {
       "name": "Christopher Bonsu Baah",
@@ -7153,6 +7153,11 @@
     },
     {
       "name": "Mohammed Abu Al-Shamat",
+      "team": "القادسية",
+      "assists": 3
+    },
+    {
+      "name": "Musab Al-Juwayr",
       "team": "القادسية",
       "assists": 3
     },
@@ -7167,7 +7172,7 @@
       "assists": 3
     },
     {
-      "name": "Eduard Spertsyan",
+      "name": "Francisco Trincão",
       "team": "الأهلي",
       "assists": 3
     },
@@ -7177,13 +7182,28 @@
       "assists": 3
     },
     {
-      "name": "Álvaro Medrán",
-      "team": "الاتفاق",
+      "name": "Mourad Batna",
+      "team": "الفتح",
+      "assists": 3
+    },
+    {
+      "name": "Sadio Mané",
+      "team": "النصر",
+      "assists": 3
+    },
+    {
+      "name": "Sultan Mandash",
+      "team": "الهلال",
       "assists": 3
     },
     {
       "name": "Ângelo Gabriel",
       "team": "النصر",
+      "assists": 3
+    },
+    {
+      "name": "Álvaro Medrán",
+      "team": "الاتفاق",
       "assists": 3
     },
     {
@@ -7207,6 +7227,11 @@
       "assists": 2
     },
     {
+      "name": "Mateo Retegui",
+      "team": "القادسية",
+      "assists": 2
+    },
+    {
       "name": "Josh Brownhill",
       "team": "الشباب",
       "assists": 2
@@ -7217,13 +7242,13 @@
       "assists": 2
     },
     {
-      "name": "Musab Al-Juwayr",
-      "team": "القادسية",
+      "name": "Mohammed Mahzari",
+      "team": "الهلال",
       "assists": 2
     },
     {
-      "name": "Mateo Retegui",
-      "team": "القادسية",
+      "name": "Jaime Seoane",
+      "team": "الفيصلي",
       "assists": 2
     },
     {
@@ -7232,18 +7257,23 @@
       "assists": 2
     },
     {
+      "name": "Sergej Milinkovic-Savic",
+      "team": "الهلال",
+      "assists": 2
+    },
+    {
       "name": "Coba da Costa",
       "team": "الخلود",
       "assists": 2
     },
     {
-      "name": "Mohammed Mahzari",
-      "team": "الهلال",
+      "name": "Ivan Toney",
+      "team": "الأهلي",
       "assists": 2
     },
     {
-      "name": "Francisco Trincão",
-      "team": "الأهلي",
+      "name": "Tijjani Reijnders",
+      "team": "القادسية",
       "assists": 2
     },
     {
@@ -7257,12 +7287,12 @@
       "assists": 2
     },
     {
-      "name": "Jaime Seoane",
-      "team": "الفيصلي",
+      "name": "Houssem Aouar",
+      "team": "الاتحاد",
       "assists": 2
     },
     {
-      "name": "Sadio Mané",
+      "name": "João Félix",
       "team": "النصر",
       "assists": 2
     },
@@ -7272,23 +7302,13 @@
       "assists": 2
     },
     {
-      "name": "Sultan Mandash",
-      "team": "الهلال",
-      "assists": 2
-    },
-    {
-      "name": "Houssem Aouar",
-      "team": "الاتحاد",
+      "name": "Abdullah Al-Hamdan",
+      "team": "النصر",
       "assists": 2
     },
     {
       "name": "Ramzi Solan",
       "team": "الخلود",
-      "assists": 2
-    },
-    {
-      "name": "João Félix",
-      "team": "النصر",
       "assists": 2
     },
     {
@@ -7307,53 +7327,18 @@
       "assists": 2
     },
     {
-      "name": "Wilfried Kanga",
-      "team": "الفتح",
-      "assists": 1
-    },
-    {
-      "name": "Sofiane Bendebka",
-      "team": "الحزم",
-      "assists": 1
-    },
-    {
-      "name": "Alexandre Lacazette",
-      "team": "نيوم",
-      "assists": 1
-    },
-    {
       "name": "Gastón Álvarez",
       "team": "القادسية",
       "assists": 1
     },
     {
-      "name": "Marin Petkov",
-      "team": "التعاون",
-      "assists": 1
-    },
-    {
-      "name": "Zaydou Youssef",
+      "name": "Wilfried Kanga",
       "team": "الفتح",
-      "assists": 1
-    },
-    {
-      "name": "Radhi Al-Otaibi",
-      "team": "الاتفاق",
       "assists": 1
     },
     {
       "name": "Saleh Al-Jamaan",
       "team": "الخليج",
-      "assists": 1
-    },
-    {
-      "name": "Yasir Shammari",
-      "team": "الاتفاق",
-      "assists": 1
-    },
-    {
-      "name": "Ahmed Al-Shamrani",
-      "team": "الحزم",
       "assists": 1
     },
     {
@@ -7364,11 +7349,6 @@
     {
       "name": "Andrei Girotto",
       "team": "الفيصلي",
-      "assists": 1
-    },
-    {
-      "name": "Mansour Camara",
-      "team": "الخلود",
       "assists": 1
     },
     {
@@ -7385,7 +7365,27 @@
       "name": "Kalidou Koulibaly",
       "team": "الهلال",
       "assists": 1
+    },
+    {
+      "name": "Sofiane Bendebka",
+      "team": "الحزم",
+      "assists": 1
+    },
+    {
+      "name": "Alexandre Lacazette",
+      "team": "نيوم",
+      "assists": 1
+    },
+    {
+      "name": "Marin Petkov",
+      "team": "التعاون",
+      "assists": 1
+    },
+    {
+      "name": "Mohammed Al-Shanqiti",
+      "team": "الفيصلي",
+      "assists": 1
     }
   ],
-  "lastUpdated": "2026-10-24 05:07 UTC"
+  "lastUpdated": "2026-10-24 09:29 UTC"
 }
